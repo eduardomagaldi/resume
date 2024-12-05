@@ -3,13 +3,16 @@ import './index.css'
 
 export default function Layout() {
   return (
-    <>
-      <Header />
+    <div className="size-a4">
+      <Outlet />
+    </div>
+    // <>
+    //   <Header />
 
-      <div className="background">
-        <Outlet />
-      </div>
-    </>
+    //   <div className="background">
+
+    //   </div>
+    // </>
   )
 }
 

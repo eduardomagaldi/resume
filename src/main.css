@@ -5,14 +5,14 @@ body {
 }
 
 body {
-  background-color: #e6e6e6;
+  background-color: #9b9b9b;
   font-family: sans-serif;
 }
 
 #root {
   font-family: 'Kanit', sans-serif;
-  padding: 30px;
-  min-width: 800px;
+  /* padding: 30px; */
+  /* min-width: 800px; */
 }
 
 .wrapper-root {

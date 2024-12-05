@@ -1,0 +1,21 @@
+.position {
+  background-color: white;
+  padding: 20px;
+}
+
+.wrapper-logo {
+  border-radius: 200px;
+  border: 3px solid blue;
+  background-color: white;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
+
+.logo {
+  box-sizing: border-box;
+  background-color: white;
+  display: block;
+  width: 100px;
+  height: 100px;
+}
