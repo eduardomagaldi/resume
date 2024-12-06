@@ -30,7 +30,7 @@
   overflow: hidden;
   padding: 40px;
   box-sizing: border-box;
-  background-color: yellow;
+  background-color: white;
 }
 
 @media print {
@@ -40,5 +40,6 @@
   body {
     /* margin: 1.6cm; */
     -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }

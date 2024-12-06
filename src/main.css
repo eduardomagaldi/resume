@@ -10,9 +10,19 @@ body {
 }
 
 #root {
-  font-family: 'Kanit', sans-serif;
+  /* font-family: 'Kanit', sans-serif; */
   /* padding: 30px; */
   /* min-width: 800px; */
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'League Gothic', sans-serif;
 }
 
 .wrapper-root {
