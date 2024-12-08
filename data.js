@@ -2,8 +2,6 @@ let data = getData()
 
 data = parseData(data.split('\n'))
 
-console.log('data', data)
-
 function parseData(data) {
   const parsedData = []
 

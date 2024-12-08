@@ -4,7 +4,9 @@ import './index.css'
 export default function Layout() {
   return (
     <div className="size-a4">
-      <Outlet />
+      <div className="wrapper-inner-page">
+        <Outlet />
+      </div>
     </div>
     // <>
     //   <Header />

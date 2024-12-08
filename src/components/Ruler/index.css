@@ -1,0 +1,39 @@
+/*   */
+
+.ruler-text {
+  text-align: center;
+  margin: 0;
+  font-size: 35px;
+}
+
+.ruler {
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  border-radius: 5px 5px 0 0;
+}
+
+/* .ruler::after {
+  content: '';
+  display: block;
+  border: 1px solid #18356e;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -3px;
+  background-color: #eaeaea;
+  left: 50%;
+} */
+
+.sub {
+  font-size: 15px;
+  text-align: center;
+  margin-top: -5px;
+}

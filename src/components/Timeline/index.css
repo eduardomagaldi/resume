@@ -1,0 +1,57 @@
+.timeline {
+  display: flex;
+  margin-top: 70px;
+}
+
+.timeline-item {
+  box-sizing: border-box;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timeline-item:last-child {
+  padding-right: 0;
+}
+
+.bar {
+  height: 10px;
+  width: 100%;
+  margin-right: 3px;
+  border: 1px solid;
+}
+
+.timeline-item:first-child .bar {
+  border-radius: 5px 0 0 5px;
+}
+
+.timeline-item:last-child .bar {
+  border-radius: 0 5px 5px 0;
+}
+
+.timeline-item:nth-child(even) .tooltip {
+  border-radius: 200px 200px 200px 0;
+  margin-top: -66px;
+}
+
+.timeline-item:nth-child(odd) .tooltip {
+  border-radius: 0 200px 200px 200px;
+  /* margin-top: 3px; */
+}
+
+.tooltip {
+  background-color: white;
+  border: 2px solid;
+
+  padding: 5px;
+  width: 35px;
+}
+
+.logo {
+  display: block;
+  padding: 3px;
+  box-sizing: border-box;
+  width: 100%;
+  /* border-radius: 400px; */
+}

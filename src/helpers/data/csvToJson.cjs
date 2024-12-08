@@ -23,10 +23,6 @@ function readFiles(dirname, onFileContent, onError) {
 }
 
 function csvToJson(filename, content) {
-  console.log(filename, '==================')
-  console.log('=========================================')
-  console.log('content', content)
-
   const csvArray = content.split('\n')
   const json = []
   let titles = null
@@ -48,8 +44,6 @@ function csvToJson(filename, content) {
       }
     }
   })
-
-  console.log('json', json)
 }
 
 function replaceCommasInsideQuotes(string) {
