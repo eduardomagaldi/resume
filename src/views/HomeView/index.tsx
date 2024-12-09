@@ -1,6 +1,18 @@
 import Timeline from '../../components/Timeline'
 import Ruler from '../../components/Ruler'
+import IconReact from '../../components/IconReact'
 import './index.css'
+
+import companiesMap from '../../helpers/companiesData'
+
+const timelineData: any[] = []
+
+companiesMap.forEach((value, key) => {
+  console.log('value.company', value.company, value.percentage)
+  timelineData.push(value)
+})
+
+const countryTimelineData = getCountryTimelineData()
 
 export default function App() {
   return (
@@ -19,17 +31,185 @@ export default function App() {
 
           <Ruler />
 
-          <Timeline />
+          <Timeline data={timelineData} />
+          <Timeline data={countryTimelineData} />
         </div>
 
         <div className="section-right">
-          <div className="made">
-            <div>Made with</div>
-            <IconReact className="icon-small" />
-            <div>React.js</div>
+          <div className="section-inner">
+            <div className="bachelor">
+              <img className="icon-education" src="/education.svg" />
+              <div className="bachelor-text">
+                <div>Bachelor's</div>
+                <div>degree in</div>
+              </div>
+            </div>
+
+            <div className="course-wrapper">
+              <h1 className="course">COMPUTER ENGINEERING</h1>
+              <div className="at">at</div>
+            </div>
+
+            <img src="/inatel.svg" />
+            {/* <div>MG, Brazil (2008 - 2012)</div> */}
           </div>
 
-          {/* <img className="made" src="/made.png" /> */}
+          <div className="section-top section-made">
+            <div className="section-inner">
+              <div className="made">
+                <div>CV made with</div>
+                <IconReact className="icon-small" />
+                <div>React.js</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="section-top section-made">
+            <div className="section-inner">
+              <div className="title-styled-wrapper">
+                <h2 className="title-styled">
+                  <div className="title-styled-text">MAIN SKILLS</div>
+                </h2>
+              </div>
+
+              <div className="skill-wrapper">
+                <div className="skill-inner">
+                  <div className="skill">HTML, CSS, JavaScript</div>
+                </div>
+
+                <div className="skill-bar">
+                  <div
+                    className="skill-bar-colored"
+                    style={{ width: '100%' }}
+                  ></div>
+                </div>
+
+                <div className="skill-label">15 years</div>
+              </div>
+
+              <div className="skill-wrapper">
+                <div className="skill-inner">
+                  <div className="skill">
+                    <div className="icon-wrapper">
+                      <div className="icon-wrapper-react">
+                        <IconReact className="icon-small-2" />
+                      </div>
+                    </div>
+                    <div>React.js</div>
+                  </div>
+                </div>
+
+                <div className="skill-bar">
+                  <div
+                    className="skill-bar-colored"
+                    style={{ width: '10%' }}
+                  ></div>
+                </div>
+
+                <div className="skill-label">1.5 years</div>
+              </div>
+
+              <div className="skill-wrapper">
+                <div className="skill-inner">
+                  <div className="skill">
+                    <div className="icon-wrapper">
+                      <img src="/vuejs.png" className="icon-small-2 icon-vue" />
+                    </div>
+                    <div>Vue.js</div>
+                  </div>
+                </div>
+
+                <div className="skill-bar">
+                  <div
+                    className="skill-bar-colored"
+                    style={{ width: '20%' }}
+                  ></div>
+                </div>
+
+                <div className="skill-label">3 years</div>
+              </div>
+
+              <div className="skill-wrapper">
+                <div className="skill-inner">
+                  <div className="skill">
+                    <div className="icon-wrapper">
+                      <img src="/angular.png" className="icon-small-2" />
+                    </div>
+                    <div>Angular / Angular.js</div>
+                  </div>
+                </div>
+
+                <div className="skill-bar">
+                  <div
+                    className="skill-bar-colored"
+                    style={{ width: '26.66%' }}
+                  ></div>
+                </div>
+
+                <div className="skill-label">4 years</div>
+              </div>
+
+              <div className="skill-wrapper">
+                <div className="skill-inner">
+                  <div className="skill">
+                    <div className="icon-wrapper">
+                      <img src="/nodejs.png" className="icon-small-2" />
+                    </div>
+                    <div>Node.js / Express</div>
+                  </div>
+                </div>
+
+                <div className="skill-bar">
+                  <div
+                    className="skill-bar-colored"
+                    style={{ width: '36.66%' }}
+                  ></div>
+                </div>
+
+                <div className="skill-label">5.5 years</div>
+              </div>
+
+              <div className="skill-wrapper">
+                <div className="skill-inner">
+                  <div className="skill">
+                    <div className="icon-wrapper">
+                      <img src="/backbonejs.png" className="icon-small-2" />
+                    </div>
+                    <div>Backbone.js</div>
+                  </div>
+                </div>
+
+                <div className="skill-bar">
+                  <div
+                    className="skill-bar-colored"
+                    style={{ width: '16.66%' }}
+                  ></div>
+                </div>
+
+                <div className="skill-label">2.5 years</div>
+              </div>
+
+              <div className="skill-wrapper">
+                <div className="skill-inner">
+                  <div className="skill">
+                    <div className="icon-wrapper">
+                      <img src="/jquery.png" className="icon-small-2" />
+                    </div>
+                    <div>jQuery</div>
+                  </div>
+                </div>
+
+                <div className="skill-bar">
+                  <div
+                    className="skill-bar-colored"
+                    style={{ width: '23.33%' }}
+                  ></div>
+                </div>
+
+                <div className="skill-label">3.5 years</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
@@ -49,14 +229,11 @@ function Header() {
       </h1>
 
       <h1 className="title education">
-        <div>COMPUTER</div>
-        <div className="wrapper-icon-education">
-          <div className="line-second">
-            ENGINEER
-            <div className="ball"></div>
-          </div>
+        <div>SOFTWARE</div>
 
-          <img className="icon-education" src="/education.svg" />
+        <div className="line-second">
+          DEVELOPER
+          <div className="ball"></div>
         </div>
       </h1>
 
@@ -66,7 +243,7 @@ function Header() {
       </h1>
 
       <div className="map">
-        <img src="/world-stroke.svg" />
+        <img className="map-img" src="/world-stroke.svg" />
 
         <div className="bubble bubble-germany">
           <img className="img" src="/germany-flag-rounded.svg" />
@@ -80,24 +257,33 @@ function Header() {
   )
 }
 
-function IconReact({ className }: { className: string }) {
-  return (
-    <svg
-      width="100%"
-      height="100%"
-      viewBox="-10.5 -9.45 21 18.9"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={'icon-react ' + className}
-    >
-      <circle cx="0" cy="0" r="2" fill="currentColor"></circle>
-      <g stroke="currentColor" stroke-width="1" fill="none">
-        <ellipse rx="10" ry="4.5"></ellipse>
-        <ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse>
-        <ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse>
-      </g>
-    </svg>
-  )
+function getCountryTimelineData() {
+  return [
+    {
+      percentage: 19.6,
+      first: true,
+      year: true,
+      logoColor: 'green',
+      logoShortPath: '/brazil-flag.svg',
+      text: 'Brazil - 3 years',
+    },
+    {
+      percentage: 26.3,
+      first: true,
+      year: true,
+      logoColor: 'red',
+      logoShortPath: '/germany-flag.svg',
+      text: 'Germany - 4 years',
+    },
+    {
+      percentage: 54.1,
+      last: true,
+      year: true,
+      logoColor: 'green',
+      logoShortPath: '/brazil-flag.svg',
+      text: 'Brazil - 8 years',
+    },
+  ]
 }
 
 // {/* <div className="wrapper-flag">

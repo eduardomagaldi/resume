@@ -3,14 +3,13 @@ const files = readFiles('./src/helpers/data/')
 
 // const string = ',,,,",",,,,'
 // const replaced = replaceCommasInsideQuotes(string)
-// console.log('replaced', replaced)
 
 function readFiles(dirname, onFileContent, onError) {
   fs.readdir(dirname, function (err, filenames) {
     filenames.forEach(function (filename) {
       fs.readFile(dirname + filename, 'utf-8', function (err, content) {
         if (err) {
-          console.log('err', err)
+          console.info('err', err)
           return
         }
 

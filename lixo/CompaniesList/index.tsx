@@ -2,17 +2,6 @@ import './index.css'
 import companiesMap from '../../helpers/companiesData'
 import positions from '../../helpers/positionsData'
 
-console.log('companiesMap', companiesMap)
-
-let sum = 0
-
-companiesMap.forEach((value, key) => {
-  console.log('value.percentage', value.percentage)
-  sum += value.percentage
-})
-
-console.log('sum', sum)
-
 export default () => {
   return <div></div>
 }
@@ -460,8 +449,6 @@ export default () => {
 //   // const datePercentageByCompanyKeys: any = Object.keys(
 //   //   datePercentageByCompany,
 //   // ).reverse()
-
-//   // console.log('companiesByName', JSON.stringify(companiesByName))
 
 //   // // const datePercentageByCompany = {
 //   // //   'B2ML Sistemas': 12.8,

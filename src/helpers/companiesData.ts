@@ -21,6 +21,7 @@ function getLocatelliData(name: string) {
     location: 'São Paulo, Brazil',
     logoColor: '#E94E25',
     percentage: 19.6,
+    year: 2024,
   }
 }
 
@@ -114,5 +115,7 @@ function getB2mlData(name: string) {
     location: 'Itajubá, Brazil',
     logoColor: '#282828',
     percentage: 12.8,
+    year: 2010,
+    first: true,
   }
 }
