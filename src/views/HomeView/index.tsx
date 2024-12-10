@@ -28,184 +28,196 @@ export default function App() {
 
       <div className="section-wrapper">
         <div className="section-left">
-          {/* <img className="made" src="/made.png" /> */}
+          <div className="section-inner">
+            {/* <img className="made" src="/made.png" /> */}
 
-          <Ruler />
+            <Ruler />
 
-          <div className="timeline-experience">
-            <Timeline data={timelineData} />
+            <div className="timeline-experience">
+              <Timeline data={timelineData} />
+            </div>
+
+            <div className="timeline-country">
+              <Timeline data={countryTimelineData} />
+            </div>
+
+            <div className="timeline-skills">
+              <Timeline data={skillsTimelineData} />
+            </div>
           </div>
 
-          <div className="timeline-country">
-            <Timeline data={countryTimelineData} />
-          </div>
-
-          <div className="timeline-skills">
-            <Timeline data={skillsTimelineData} />
-          </div>
-
-          <div className="title-styled-wrapper title-main-skills">
-            <h2 className="title-styled">
-              <div className="title-styled-text mt-10 title-other-skills">
-                MAIN SKILLS
+          <div className="section-top">
+            <div className="section-inner">
+              <div className="title-styled-wrapper title-main-skills">
+                <h2 className="title-styled">
+                  <div className="title-styled-text mt-10 title-other-skills">
+                    MAIN SKILLS
+                  </div>
+                </h2>
               </div>
-            </h2>
-          </div>
 
-          <div className="skill-wrapper">
-            <div className="skill">
-              <div className="icon-wrapper">
-                <div className="icon-wrapper-react">
-                  <strong className="icon-html">{'</>'}</strong>
+              <div className="skill-wrapper">
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <div className="icon-wrapper-react">
+                      {/* <strong className="icon-html">{'</>'}</strong> */}
+                      <img src="/html.png" className="icon-small-2" />
+                    </div>
+                  </div>
+                  <div>HTML</div>
+                </div>
+
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <div className="icon-wrapper-react">
+                      <strong className="icon-css">{'{ }'}</strong>
+                    </div>
+                  </div>
+                  <div>CSS</div>
+                </div>
+
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <div className="icon-wrapper-react">
+                      <img src="/javascript.png" className="icon-small-2" />
+                    </div>
+                  </div>
+                  <div>JavaScript</div>
                 </div>
               </div>
-              <div>HTML</div>
-            </div>
 
-            <div className="skill">
-              <div className="icon-wrapper">
-                <div className="icon-wrapper-react">
-                  <strong className="icon-css">{'{ }'}</strong>
+              {/* <hr /> */}
+
+              <div className="skill-wrapper">
+                <strong className="classification">Front-end:</strong>
+
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <img src="/vuejs.png" className="icon-small-2 icon-vue" />
+                  </div>
+                  <div>Vue.js</div>
+                </div>
+
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <div className="icon-wrapper-react">
+                      <img src="/reactjs.png" className="icon-small-2" />
+                    </div>
+                  </div>
+                  <div>React</div>
+                </div>
+
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <img src="/angular.png" className="icon-small-2" />
+                  </div>
+                  <div>Angular</div>
+                </div>
+
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <img
+                      src="/backbonejs.png"
+                      className="icon-small-2 icon-backbone"
+                    />
+                  </div>
+                  <div>Backbone.js</div>
+                </div>
+
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <img src="/jquery.png" className="icon-small-2" />
+                  </div>
+                  <div>jQuery</div>
                 </div>
               </div>
-              <div>CSS</div>
-            </div>
 
-            <div className="skill">
-              <div className="icon-wrapper">
-                <div className="icon-wrapper-react">
-                  <img src="/javascript.png" className="icon-small-2" />
+              {/* <hr /> */}
+
+              <div className="skill-wrapper">
+                <strong className="classification">Testing:</strong>
+
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <img src="/protractor.png" className="icon-small-2" />
+                  </div>
+                  <div>Protractor (End-to-end)</div>
                 </div>
               </div>
-              <div>JavaScript</div>
-            </div>
-          </div>
 
-          {/* <hr /> */}
+              <div className="skill-wrapper">
+                <strong className="classification">Back-end:</strong>
 
-          <div className="skill-wrapper">
-            <strong className="classification">Front-end:</strong>
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <img src="/nodejs.png" className="icon-small-2" />
+                  </div>
+                  <div>Node.js (Express)</div>
+                </div>
 
-            <div className="skill">
-              <div className="icon-wrapper">
-                <img src="/vuejs.png" className="icon-small-2 icon-vue" />
-              </div>
-              <div>Vue.js</div>
-            </div>
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <div className="icon-wrapper-react">
+                      <img src="/graphql.png" className="icon-small-2" />
+                    </div>
+                  </div>
+                  <div>GraphQL</div>
+                </div>
 
-            <div className="skill">
-              <div className="icon-wrapper">
-                <div className="icon-wrapper-react">
-                  <img src="/reactjs.png" className="icon-small-2" />
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <div className="icon-wrapper-react">
+                      <img src="/postgresql.png" className="icon-small-2" />
+                    </div>
+                  </div>
+                  <div>PostgreSQL</div>
+                </div>
+
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <div className="icon-wrapper-react">
+                      <img src="/redis.png" className="icon-small-2" />
+                    </div>
+                  </div>
+                  <div>Redis</div>
                 </div>
               </div>
-              <div>React</div>
-            </div>
 
-            <div className="skill">
-              <div className="icon-wrapper">
-                <img src="/angular.png" className="icon-small-2" />
-              </div>
-              <div>Angular</div>
-            </div>
+              <div className="skill-wrapper">
+                <strong className="classification">Infrastructure:</strong>
 
-            <div className="skill">
-              <div className="icon-wrapper">
-                <img
-                  src="/backbonejs.png"
-                  className="icon-small-2 icon-backbone"
-                />
-              </div>
-              <div>Backbone.js</div>
-            </div>
-
-            <div className="skill">
-              <div className="icon-wrapper">
-                <img src="/jquery.png" className="icon-small-2" />
-              </div>
-              <div>jQuery</div>
-            </div>
-          </div>
-
-          {/* <hr /> */}
-
-          <div className="skill-wrapper">
-            <strong className="classification">Testing:</strong>
-
-            <div className="skill">
-              <div className="icon-wrapper">
-                <img src="/protractor.png" className="icon-small-2" />
-              </div>
-              <div>Protractor (End-to-end)</div>
-            </div>
-          </div>
-
-          {/* <hr /> */}
-
-          <div className="skill-wrapper">
-            <strong className="classification">Back-end:</strong>
-
-            <div className="skill">
-              <div className="icon-wrapper">
-                <img src="/nodejs.png" className="icon-small-2" />
-              </div>
-              <div>Node.js (Express)</div>
-            </div>
-
-            <div className="skill">
-              <div className="icon-wrapper">
-                <div className="icon-wrapper-react">
-                  <img src="/graphql.png" className="icon-small-2" />
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <img src="/aws.png" className="icon-small-2" />
+                  </div>
+                  <div>AWS</div>
                 </div>
               </div>
-              <div>GraphQL</div>
-            </div>
 
-            <div className="skill">
-              <div className="icon-wrapper">
-                <div className="icon-wrapper-react">
-                  <img src="/postgresql.png" className="icon-small-2" />
+              <div className="skill-wrapper">
+                <strong className="classification">Other:</strong>
+
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <img src="/git.png" className="icon-small-2" />
+                  </div>
+                  <div>GIT</div>
+                </div>
+
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <img src="/responsive.png" className="icon-small-2" />
+                  </div>
+                  <div>Responsive pages</div>
+                </div>
+
+                <div className="skill">
+                  <div className="icon-wrapper">
+                    <img src="/ajax.png" className="icon-small-2" />
+                  </div>
+                  <div>AJAX</div>
                 </div>
               </div>
-              <div>PostgreSQL</div>
-            </div>
-
-            <div className="skill">
-              <div className="icon-wrapper">
-                <div className="icon-wrapper-react">
-                  <img src="/redis.png" className="icon-small-2" />
-                </div>
-              </div>
-              <div>Redis</div>
-            </div>
-          </div>
-
-          <div className="skill-wrapper">
-            <strong className="classification">Infrastructure:</strong>
-
-            <div className="skill">
-              <div className="icon-wrapper">
-                <img src="/aws.png" className="icon-small-2" />
-              </div>
-              <div>AWS</div>
-            </div>
-          </div>
-
-          <div className="skill-wrapper">
-            <strong className="classification">Other:</strong>
-
-            <div className="skill">
-              <div className="icon-wrapper">
-                <img src="/git.png" className="icon-small-2" />
-              </div>
-              <div>GIT</div>
-            </div>
-
-            <div className="skill">
-              <div className="icon-wrapper">
-                <img src="/responsive.png" className="icon-small-2" />
-              </div>
-              <div>Responsive pages</div>
             </div>
           </div>
         </div>
