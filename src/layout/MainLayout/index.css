@@ -18,7 +18,7 @@
 
 .size-a4 {
   width: 210mm;
-  height: 2000mm; /* 297mm * 3 */
+  height: 297mm; /* 297mm * 3 */
   box-shadow: 1px 1px 10px black;
   overflow: hidden;
   padding: 20px;
@@ -52,6 +52,7 @@
   flex-grow: 1;
   border-right: 1px solid rgb(192, 192, 192);
   padding: 20px;
+  width: 515px;
 }
 
 .section-right {

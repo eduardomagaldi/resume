@@ -84,7 +84,7 @@ export default [
     ],
 
     skills: [
-      'React.js',
+      'React',
       'Node.js',
       'PostgreSQL',
       'GraphQL',
@@ -116,7 +116,7 @@ export default [
       'Built landing pages with strict requirements of Google Lighthouse for SEO optimization',
     ],
 
-    skills: ['React.js', ...commonSkills],
+    skills: ['React', ...commonSkills],
   },
 
   {

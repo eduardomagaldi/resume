@@ -1,4 +1,4 @@
-import './index.css'
+import './index.scss'
 
 export default ({ data }: { data: any }) => {
   return (
@@ -26,7 +26,10 @@ export default ({ data }: { data: any }) => {
             ></div>
 
             <div
-              className={'tooltip' + (!item.text ? ' logo-only' : '')}
+              className={
+                'tooltip' +
+                (!item.text && item.text !== '' ? ' logo-only' : ' logo-text')
+              }
               style={{
                 borderColor: item.logoColor,
               }}

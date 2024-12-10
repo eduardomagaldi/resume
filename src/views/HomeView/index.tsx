@@ -1,7 +1,7 @@
 import Timeline from '../../components/Timeline'
 import Ruler from '../../components/Ruler'
-import IconReact from '../../components/IconReact'
-import './index.css'
+
+import './index.scss'
 
 import companiesMap from '../../helpers/companiesData'
 
@@ -13,6 +13,7 @@ companiesMap.forEach((value, key) => {
 })
 
 const countryTimelineData = getCountryTimelineData()
+const skillsTimelineData = getSkillsTimelineData()
 
 export default function App() {
   return (
@@ -31,8 +32,182 @@ export default function App() {
 
           <Ruler />
 
-          <Timeline data={timelineData} />
-          <Timeline data={countryTimelineData} />
+          <div className="timeline-experience">
+            <Timeline data={timelineData} />
+          </div>
+
+          <div className="timeline-country">
+            <Timeline data={countryTimelineData} />
+          </div>
+
+          <div className="timeline-skills">
+            <Timeline data={skillsTimelineData} />
+          </div>
+
+          <div className="title-styled-wrapper title-main-skills">
+            <h2 className="title-styled">
+              <div className="title-styled-text mt-10 title-other-skills">
+                MAIN SKILLS
+              </div>
+            </h2>
+          </div>
+
+          <div className="skill-wrapper">
+            <div className="skill">
+              <div className="icon-wrapper">
+                <div className="icon-wrapper-react">
+                  <strong className="icon-html">{'</>'}</strong>
+                </div>
+              </div>
+              <div>HTML</div>
+            </div>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <div className="icon-wrapper-react">
+                  <strong className="icon-css">{'{ }'}</strong>
+                </div>
+              </div>
+              <div>CSS</div>
+            </div>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <div className="icon-wrapper-react">
+                  <img src="/javascript.png" className="icon-small-2" />
+                </div>
+              </div>
+              <div>JavaScript</div>
+            </div>
+          </div>
+
+          {/* <hr /> */}
+
+          <div className="skill-wrapper">
+            <strong className="classification">Front-end:</strong>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <img src="/vuejs.png" className="icon-small-2 icon-vue" />
+              </div>
+              <div>Vue.js</div>
+            </div>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <div className="icon-wrapper-react">
+                  <img src="/reactjs.png" className="icon-small-2" />
+                </div>
+              </div>
+              <div>React</div>
+            </div>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <img src="/angular.png" className="icon-small-2" />
+              </div>
+              <div>Angular</div>
+            </div>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <img
+                  src="/backbonejs.png"
+                  className="icon-small-2 icon-backbone"
+                />
+              </div>
+              <div>Backbone.js</div>
+            </div>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <img src="/jquery.png" className="icon-small-2" />
+              </div>
+              <div>jQuery</div>
+            </div>
+          </div>
+
+          {/* <hr /> */}
+
+          <div className="skill-wrapper">
+            <strong className="classification">Testing:</strong>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <img src="/protractor.png" className="icon-small-2" />
+              </div>
+              <div>Protractor (End-to-end)</div>
+            </div>
+          </div>
+
+          {/* <hr /> */}
+
+          <div className="skill-wrapper">
+            <strong className="classification">Back-end:</strong>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <img src="/nodejs.png" className="icon-small-2" />
+              </div>
+              <div>Node.js (Express)</div>
+            </div>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <div className="icon-wrapper-react">
+                  <img src="/graphql.png" className="icon-small-2" />
+                </div>
+              </div>
+              <div>GraphQL</div>
+            </div>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <div className="icon-wrapper-react">
+                  <img src="/postgresql.png" className="icon-small-2" />
+                </div>
+              </div>
+              <div>PostgreSQL</div>
+            </div>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <div className="icon-wrapper-react">
+                  <img src="/redis.png" className="icon-small-2" />
+                </div>
+              </div>
+              <div>Redis</div>
+            </div>
+          </div>
+
+          <div className="skill-wrapper">
+            <strong className="classification">Infrastructure:</strong>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <img src="/aws.png" className="icon-small-2" />
+              </div>
+              <div>AWS</div>
+            </div>
+          </div>
+
+          <div className="skill-wrapper">
+            <strong className="classification">Other:</strong>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <img src="/git.png" className="icon-small-2" />
+              </div>
+              <div>GIT</div>
+            </div>
+
+            <div className="skill">
+              <div className="icon-wrapper">
+                <img src="/responsive.png" className="icon-small-2" />
+              </div>
+              <div>Responsive pages</div>
+            </div>
+          </div>
         </div>
 
         <div className="section-right">
@@ -51,163 +226,22 @@ export default function App() {
             </div>
 
             <img src="/inatel.svg" />
-            {/* <div>MG, Brazil (2008 - 2012)</div> */}
           </div>
 
           <div className="section-top section-made">
             <div className="section-inner">
               <div className="made">
                 <div>CV made with</div>
-                <IconReact className="icon-small" />
-                <div>React.js</div>
+                <img src="/reactjs.png" className="icon-small" />
+
+                <div>React</div>
               </div>
             </div>
           </div>
 
           <div className="section-top section-made">
             <div className="section-inner">
-              <div className="title-styled-wrapper">
-                <h2 className="title-styled">
-                  <div className="title-styled-text">MAIN SKILLS</div>
-                </h2>
-              </div>
-
-              <div className="skill-wrapper">
-                <div className="skill-inner">
-                  <div className="skill">HTML, CSS, JavaScript</div>
-                </div>
-
-                <div className="skill-bar">
-                  <div
-                    className="skill-bar-colored"
-                    style={{ width: '100%' }}
-                  ></div>
-                </div>
-
-                <div className="skill-label">15 years</div>
-              </div>
-
-              <div className="skill-wrapper">
-                <div className="skill-inner">
-                  <div className="skill">
-                    <div className="icon-wrapper">
-                      <div className="icon-wrapper-react">
-                        <IconReact className="icon-small-2" />
-                      </div>
-                    </div>
-                    <div>React.js</div>
-                  </div>
-                </div>
-
-                <div className="skill-bar">
-                  <div
-                    className="skill-bar-colored"
-                    style={{ width: '10%' }}
-                  ></div>
-                </div>
-
-                <div className="skill-label">1.5 years</div>
-              </div>
-
-              <div className="skill-wrapper">
-                <div className="skill-inner">
-                  <div className="skill">
-                    <div className="icon-wrapper">
-                      <img src="/vuejs.png" className="icon-small-2 icon-vue" />
-                    </div>
-                    <div>Vue.js</div>
-                  </div>
-                </div>
-
-                <div className="skill-bar">
-                  <div
-                    className="skill-bar-colored"
-                    style={{ width: '20%' }}
-                  ></div>
-                </div>
-
-                <div className="skill-label">3 years</div>
-              </div>
-
-              <div className="skill-wrapper">
-                <div className="skill-inner">
-                  <div className="skill">
-                    <div className="icon-wrapper">
-                      <img src="/angular.png" className="icon-small-2" />
-                    </div>
-                    <div>Angular / Angular.js</div>
-                  </div>
-                </div>
-
-                <div className="skill-bar">
-                  <div
-                    className="skill-bar-colored"
-                    style={{ width: '26.66%' }}
-                  ></div>
-                </div>
-
-                <div className="skill-label">4 years</div>
-              </div>
-
-              <div className="skill-wrapper">
-                <div className="skill-inner">
-                  <div className="skill">
-                    <div className="icon-wrapper">
-                      <img src="/nodejs.png" className="icon-small-2" />
-                    </div>
-                    <div>Node.js / Express</div>
-                  </div>
-                </div>
-
-                <div className="skill-bar">
-                  <div
-                    className="skill-bar-colored"
-                    style={{ width: '36.66%' }}
-                  ></div>
-                </div>
-
-                <div className="skill-label">5.5 years</div>
-              </div>
-
-              <div className="skill-wrapper">
-                <div className="skill-inner">
-                  <div className="skill">
-                    <div className="icon-wrapper">
-                      <img src="/backbonejs.png" className="icon-small-2" />
-                    </div>
-                    <div>Backbone.js</div>
-                  </div>
-                </div>
-
-                <div className="skill-bar">
-                  <div
-                    className="skill-bar-colored"
-                    style={{ width: '16.66%' }}
-                  ></div>
-                </div>
-
-                <div className="skill-label">2.5 years</div>
-              </div>
-
-              <div className="skill-wrapper">
-                <div className="skill-inner">
-                  <div className="skill">
-                    <div className="icon-wrapper">
-                      <img src="/jquery.png" className="icon-small-2" />
-                    </div>
-                    <div>jQuery</div>
-                  </div>
-                </div>
-
-                <div className="skill-bar">
-                  <div
-                    className="skill-bar-colored"
-                    style={{ width: '23.33%' }}
-                  ></div>
-                </div>
-
-                <div className="skill-label">3.5 years</div>
-              </div>
+              <Profile />
             </div>
           </div>
         </div>
@@ -243,6 +277,7 @@ function Header() {
       </h1>
 
       <div className="map">
+        {/* <img className="map-img map-img-green" src="/world-green.svg" /> */}
         <img className="map-img" src="/world-stroke.svg" />
 
         <div className="bubble bubble-germany">
@@ -261,29 +296,109 @@ function getCountryTimelineData() {
   return [
     {
       percentage: 19.6,
-      first: true,
-      year: true,
+
+      year: 2024,
       logoColor: 'green',
       logoShortPath: '/brazil-flag.svg',
       text: 'Brazil - 3 years',
     },
     {
       percentage: 26.3,
-      first: true,
-      year: true,
       logoColor: 'red',
       logoShortPath: '/germany-flag.svg',
       text: 'Germany - 4 years',
     },
     {
       percentage: 54.1,
-      last: true,
-      year: true,
+      first: true,
+      year: 2010,
       logoColor: 'green',
       logoShortPath: '/brazil-flag.svg',
       text: 'Brazil - 8 years',
     },
   ]
+}
+
+function getSkillsTimelineData() {
+  return [
+    {
+      percentage: 19.6,
+      year: 2024,
+      logoColor: '#41B883',
+      logoShortPath: '/vuejs.png',
+      text: 'Vue.js',
+    },
+    {
+      percentage: 9.5,
+      logoColor: '#387ca0',
+      logoShortPath: '/reactjs.png',
+      text: 'React',
+    },
+    {
+      percentage: 28.5,
+      logoColor: '#C42AF1',
+      logoShortPath: '/angular.png',
+      text: 'Angular',
+    },
+
+    {
+      percentage: 12.8,
+      logoColor: '#2A73B4',
+      logoShortPath: '/jquery.png',
+      text: 'jQuery',
+    },
+
+    {
+      percentage: 16.8,
+      logoColor: '#002A41',
+      logoShortPath: '/backbonejs.png',
+      text: 'Backbone.js',
+    },
+
+    {
+      percentage: 12.8,
+      logoColor: '#2A73B4',
+      logoShortPath: '/jquery.png',
+      text: '',
+    },
+  ]
+}
+
+function Profile() {
+  return (
+    <>
+      <div className="title-styled-wrapper">
+        <h2 className="title-styled">
+          <div className="title-styled-text">PROFILE</div>
+        </h2>
+      </div>
+
+      <ul className="list-content">
+        <li>
+          Experienced front-end developer with a great enthusiasm for{' '}
+          <strong>Design</strong>, <strong>UI</strong>, and <strong>UX</strong>.
+        </li>
+
+        <li>
+          Strong <a href="https://cantunsee.space/">attention to detail</a>.
+        </li>
+
+        <li>
+          Familiarity with <strong>RESTful back-end</strong> and{' '}
+          <strong>databases</strong>.
+        </li>
+
+        <li>
+          <strong>Web design</strong> competences.
+        </li>
+        <li>
+          Fluent in <strong>English</strong> and <strong>Portuguese</strong>{' '}
+          with good communication skills.
+        </li>
+      </ul>
+      <p></p>
+    </>
+  )
 }
 
 // {/* <div className="wrapper-flag">

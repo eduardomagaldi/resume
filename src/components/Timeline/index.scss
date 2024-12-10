@@ -61,6 +61,10 @@
   width: 100%;
 }
 
+.tooltip.logo-text .logo {
+  width: 26px;
+}
+
 .logo {
   display: block;
   padding: 3px;
@@ -79,5 +83,39 @@
 
 .text {
   text-wrap: nowrap;
-  padding: 0px 5px 0 3px;
+  padding: 0px 5px 0 0;
+}
+
+.timeline-skills {
+  .timeline-item:nth-child(even) .tooltip {
+    margin-top: -56px;
+  }
+
+  .timeline-item:nth-child(odd) .tooltip {
+    margin-top: 4px;
+  }
+
+  .logo {
+    width: 20px;
+  }
+}
+
+.timeline-country {
+  .timeline-item:nth-child(even) .tooltip {
+    margin-top: -49px;
+  }
+
+  .timeline-item:nth-child(odd) .tooltip {
+    margin-top: 4px;
+  }
+}
+
+.timeline-experience {
+  .timeline-item:nth-child(even) .tooltip {
+    margin-top: -65px;
+  }
+
+  .timeline-item:nth-child(odd) .tooltip {
+    margin-top: 4px;
+  }
 }
