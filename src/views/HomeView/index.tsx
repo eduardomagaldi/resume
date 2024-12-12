@@ -293,7 +293,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="size-a4">
+      <div className="size-a4 page-detail">
         <div className="wrapper-inner-page">
           <div className="section">
             <div className="section-inner">

@@ -18,12 +18,16 @@
 
 .size-a4 {
   width: 210mm;
-  height: 297mm;
+  /* height: 297mm; */
   overflow: hidden;
   padding: 20px 20px 23px 20px;
   box-sizing: border-box;
   background-image: url('/paper-back.jpg');
   background-size: 400px;
+}
+
+.page-detail {
+  font-size: 20px;
 }
 
 .wrapper-inner-page {
