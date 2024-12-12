@@ -18,10 +18,9 @@
 
 .size-a4 {
   width: 210mm;
-  height: 297mm; /* 297mm * 3 */
-  box-shadow: 1px 1px 10px black;
+  height: 297mm;
   overflow: hidden;
-  padding: 20px;
+  padding: 20px 20px 23px 20px;
   box-sizing: border-box;
   background-image: url('/paper-back.jpg');
   background-size: 400px;
@@ -29,14 +28,12 @@
 
 .wrapper-inner-page {
   border: 1px solid rgb(192, 192, 192);
-
-  /* background-image: url('/paper-lighter.jpg'); */
   background-image: url('/paper-front.jpg');
   background-size: 400px;
+  height: 100%;
 }
 
 .section {
-  padding: 20px;
   border-bottom: 1px solid rgb(192, 192, 192);
 }
 
@@ -71,7 +68,6 @@
     margin: 0;
   }
   body {
-    /* margin: 1.6cm; */
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }

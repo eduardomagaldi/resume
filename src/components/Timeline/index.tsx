@@ -34,8 +34,14 @@ export default ({ data }: { data: any }) => {
                 borderColor: item.logoColor,
               }}
             >
-              <img className="logo" src={item.logoShortPath} />
-              {item.text && <div className="text">{item.text}</div>}
+              {item.logoShortPath && (
+                <img className="logo" src={item.logoShortPath} />
+              )}
+              {item.text && (
+                <div className={'text' + (item.onlyText ? ' text-only' : '')}>
+                  {item.text}
+                </div>
+              )}
             </div>
           </div>
         ))}

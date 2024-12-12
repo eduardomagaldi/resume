@@ -227,7 +227,17 @@
 }
 
 .icon-education {
-  width: 30px;
+  width: 26px;
+  margin-right: 7px;
+}
+
+.icon-profile {
+  width: 24px;
+  margin-right: 4px;
+}
+
+.icon-skills {
+  width: 24px;
   margin-right: 7px;
 }
 
@@ -268,6 +278,9 @@
 .title-styled {
   margin: 0;
   position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .title-styled::before {
@@ -295,6 +308,10 @@
 .skill-wrapper {
   display: flex;
   margin-bottom: 10px;
+}
+
+.skill-wrapper:last-child {
+  margin-bottom: 0;
 }
 
 .skill {
@@ -345,10 +362,10 @@
   margin-right: 10px;
 }
 
-.title-main-skills {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
+// .title-main-skills {
+//   margin-top: 0;
+//   margin-bottom: 10px;
+// }
 
 .icon-backbone {
   width: 14px;
@@ -356,7 +373,7 @@
 }
 
 .list-content {
-  padding: 0 0 0 14px;
+  padding: 0 0 0 18px;
   margin: 0;
 }
 
@@ -364,8 +381,65 @@
   margin-bottom: 10px;
 }
 
+.list-content li:last-child {
+  margin-bottom: 0;
+}
+
 a {
   color: #2a742a;
   text-decoration: none;
   font-weight: bold;
+}
+
+.email {
+  font-size: 15px;
+}
+
+.email small {
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.icon-email {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.email-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.icon-whatsapp {
+  width: 15px;
+  margin-right: 3px;
+}
+
+.phone-wrapper {
+  margin-top: 10px;
+}
+
+.section-pagination {
+  justify-content: end;
+  display: flex;
+  height: 45px;
+  align-items: end;
+}
+
+.section-keywords {
+  line-height: 19px;
+}
+
+.short {
+  justify-content: start;
+
+  .title {
+    width: auto;
+    display: flex;
+  }
+
+  .first {
+    width: auto;
+    text-align: left;
+  }
 }
