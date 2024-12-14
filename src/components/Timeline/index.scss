@@ -126,10 +126,14 @@
 
 .timeline-positions {
   .timeline-item:nth-child(even) .tooltip {
-    margin-top: -49px;
+    margin-top: -56px;
   }
 
   .timeline-item:nth-child(odd) .tooltip {
     margin-top: 4px;
+  }
+
+  .tooltip .logo {
+    width: 30px;
   }
 }

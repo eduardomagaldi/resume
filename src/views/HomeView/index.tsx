@@ -5,6 +5,7 @@ import Experience from '../../components/Experience'
 import './index.scss'
 
 import companiesMap from '../../helpers/companiesData'
+import IconText from '../../components/IconText'
 
 const timelineData: any[] = []
 
@@ -60,11 +61,10 @@ export default function App() {
                     </h2>
                   </div>
 
-                  <div className="skill-wrapper">
+                  {/* <div className="skill-wrapper">
                     <div className="skill">
                       <div className="icon-wrapper">
                         <div className="icon-wrapper-react">
-                          {/* <strong className="icon-html">{'</>'}</strong> */}
                           <img src="/html.png" className="icon-small-2" />
                         </div>
                       </div>
@@ -88,55 +88,36 @@ export default function App() {
                       </div>
                       <div>JavaScript</div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* <hr /> */}
+
+                  {/* 
+                  
+                  
+                  
+                  <IconText iconPath="/backbonejs.png" text="Backbone.js" />
+                  <IconText iconPath="/jquery.png" text="jQuery" />
+                   */}
+
+                  {/* 
+                  
+                  
+                   */}
+
+                  <div className="skill-wrapper">
+                    <IconText iconPath="/html.png" text="HTML" />
+                    <IconText iconPath="/css.png" text="CSS" />
+                    <IconText iconPath="/javascript.png" text="JavaScript" />
+                  </div>
 
                   <div className="skill-wrapper">
                     <strong className="classification">Front-end:</strong>
 
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <img
-                          src="/vuejs.png"
-                          className="icon-small-2 icon-vue"
-                        />
-                      </div>
-                      <div>Vue.js</div>
-                    </div>
-
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <div className="icon-wrapper-react">
-                          <img src="/reactjs.png" className="icon-small-2" />
-                        </div>
-                      </div>
-                      <div>React</div>
-                    </div>
-
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <img src="/angular.png" className="icon-small-2" />
-                      </div>
-                      <div>Angular</div>
-                    </div>
-
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <img
-                          src="/backbonejs.png"
-                          className="icon-small-2 icon-backbone"
-                        />
-                      </div>
-                      <div>Backbone.js</div>
-                    </div>
-
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <img src="/jquery.png" className="icon-small-2" />
-                      </div>
-                      <div>jQuery</div>
-                    </div>
+                    <IconText iconPath="/vuejs.png" text="Vue.js" />
+                    <IconText iconPath="/reactjs.png" text="React" />
+                    <IconText iconPath="/angular.png" text="Angular" />
+                    <IconText iconPath="/bootstrap.png" text="Bootstrap" />
                   </div>
 
                   {/* <hr /> */}
@@ -144,85 +125,33 @@ export default function App() {
                   <div className="skill-wrapper">
                     <strong className="classification">Testing:</strong>
 
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <img src="/protractor.png" className="icon-small-2" />
-                      </div>
-                      <div>Protractor (End-to-end)</div>
-                    </div>
+                    <IconText
+                      iconPath="/protractor.png"
+                      text="Protractor (End-to-end)"
+                    />
                   </div>
 
                   <div className="skill-wrapper">
                     <strong className="classification">Back-end:</strong>
 
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <img src="/nodejs.png" className="icon-small-2" />
-                      </div>
-                      <div>Node.js (Express)</div>
-                    </div>
-
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <div className="icon-wrapper-react">
-                          <img src="/graphql.png" className="icon-small-2" />
-                        </div>
-                      </div>
-                      <div>GraphQL</div>
-                    </div>
-
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <div className="icon-wrapper-react">
-                          <img src="/postgresql.png" className="icon-small-2" />
-                        </div>
-                      </div>
-                      <div>PostgreSQL</div>
-                    </div>
-
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <div className="icon-wrapper-react">
-                          <img src="/redis.png" className="icon-small-2" />
-                        </div>
-                      </div>
-                      <div>Redis</div>
-                    </div>
+                    <IconText iconPath="/nodejs.png" text="Node.js (Express)" />
+                    <IconText iconPath="/graphql.png" text="GraphQL" />
+                    <IconText iconPath="/postgresql.png" text="PostgreSQL" />
+                    <IconText iconPath="/redis.png" text="Redis" />
                   </div>
 
                   <div className="skill-wrapper">
                     <strong className="classification">Infrastructure:</strong>
 
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <img src="/aws.png" className="icon-small-2" />
-                      </div>
-                      <div>AWS</div>
-                    </div>
+                    <IconText iconPath="/aws.png" text="AWS" />
                   </div>
 
                   <div className="skill-wrapper">
                     <strong className="classification">Other:</strong>
 
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <img src="/git.png" className="icon-small-2" />
-                      </div>
-                      <div>GIT</div>
-                    </div>
-
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <img src="/responsive.png" className="icon-small-2" />
-                      </div>
-                      <div>Responsive pages</div>
-                    </div>
-
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <img src="/ajax.png" className="icon-small-2" />
-                      </div>
-                      <div>AJAX</div>
+                    {/* <IconText iconPath="/git.png" text="GIT" /> */}
+                    <div className="icon-text">
+                      GIT, Responsive pages, AJAX, REST APIs
                     </div>
                   </div>
                 </div>
@@ -303,7 +232,7 @@ export default function App() {
 
           <div className="section">
             <div className="section-wrapper">
-              <div className="section-inner">
+              <div className="section-inner w-100">
                 <div className="title-styled-wrapper">
                   <h2 className="title-styled">
                     {/* <img className="icon-profile" src="/education.png" /> */}
@@ -312,17 +241,45 @@ export default function App() {
                   </h2>
                 </div>
 
-                <span>
-                  Bachelor's degree in <strong>Computer Engineering</strong> at{' '}
-                  <strong>INATEL</strong> (Instituto Nacional de
-                  Telecomunicações), MG - Brazil
-                </span>
+                <div className="wrapper-education">
+                  <div className="wrapper-education-inner">
+                    <div className="education-content">
+                      <div>Bachelor's degree in</div>
+                      <strong>Computer Engineering</strong>
+                      <div className="d-flex">
+                        <IconText iconPath="/calendar.png" text="2008 - " />
+                        &nbsp;
+                        <IconText iconPath="/calendar.png" text="2012" />
+                      </div>
+                    </div>
+
+                    <div className="education-content">
+                      <strong>INATEL</strong>
+                      <div>
+                        Instituto Nacional de <br />
+                        Telecomunicações
+                      </div>
+                    </div>
+                    <div className="education-content">
+                      <div>&nbsp;</div>
+                      <div className="d-flex">
+                        <img className="icon-whatsapp" src="/location.png" />
+                        <div>Minas Gerais,&nbsp;</div>
+                        <div>Brazil</div>
+                      </div>
+                    </div>
+                    <img
+                      className="logo-inatel education-content"
+                      src="/inatel.svg"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="section-wrapper">
-            <div className="section-inner">
+            <div className="section-inner w-100">
               <div className="title-styled-wrapper">
                 <h2 className="title-styled">
                   <img className="icon-education" src="/work.png" />
@@ -485,24 +442,30 @@ function getPositionsTimelineData() {
   return [
     {
       text: 'Full-stack',
+      logoShortPath: '/fullstack.png',
       percentage: 19.6 + 2.8,
       logoColor: 'green',
       year: 2024,
-      onlyText: true,
     },
     {
       text: 'Front-end',
       percentage: 12.8 + 6.7 + 16.8 + 2.2 + 9.5,
       logoColor: '#234a96',
-      onlyText: true,
+
+      logoShortPath: '/html.png',
     },
     {
       text: 'Full-stack',
       percentage: 16.8,
       logoColor: 'green',
-      onlyText: true,
+
+      logoShortPath: '/fullstack.png',
     },
-    { text: 'Front', percentage: 12.8, logoColor: '#234a96', onlyText: true },
+    {
+      percentage: 12.8,
+      logoColor: '#234a96',
+      logoShortPath: '/html.png',
+    },
   ]
 }
 
@@ -516,7 +479,7 @@ function Profile() {
         </h2>
       </div>
 
-      <ul className="list-content">
+      <ul className="list-content list-content-first-page">
         <li>
           Experienced front-end developer with great enthusiasm for{' '}
           <strong>Design</strong>, <strong>UI</strong>, and <strong>UX</strong>.

@@ -308,6 +308,10 @@
 .skill-wrapper {
   display: flex;
   margin-bottom: 10px;
+
+  .icon-text {
+    margin-right: 10px;
+  }
 }
 
 .skill-wrapper:last-child {
@@ -373,16 +377,20 @@
 }
 
 .list-content {
-  padding: 0 0 0 18px;
+  padding: 0 0 0 14px;
   margin: 0;
 }
 
-.list-content li {
+.list-content-first-page li {
   margin-bottom: 10px;
 }
 
 .list-content li:last-child {
   margin-bottom: 0;
+}
+
+.parent {
+  list-style: none;
 }
 
 a {
@@ -444,3 +452,36 @@ a {
     text-align: left;
   }
 }
+
+// .wrapper-education,
+// .wrapper-education-inner {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+.wrapper-education-inner {
+  display: flex;
+  justify-content: space-between;
+  // align-items: baseline;
+}
+
+.education-content {
+  text-wrap: balance;
+  // margin: 10px;
+  // width: 20%;
+}
+
+.logo-inatel {
+  width: 150px;
+  height: 55px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+// .string {
+//   // margin-top: 10px;
+//   // text-wrap: balance;
+// }

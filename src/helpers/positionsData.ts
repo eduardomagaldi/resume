@@ -8,20 +8,18 @@ export default [
     end: '2024-12-01',
 
     description: [
+      'Tax lawsuit management system developed from scratch',
+      ['Automation of PDF status reports'],
+      'Team leadership',
+      ['Recruitment of two programmers'],
+      'Internal tools development',
       [
-        'Tax lawsuit management system developed from scratch',
-        ['Automation of PDF status reports'],
-        'Team leadership',
-        ['Recruitment of two programmers'],
-        'Internal tools development',
-        [
-          'Retrieving lawsuit API data',
-          'Tracking deadlines',
-          'Monitoring legal public tax cases',
-          'Calculating potential savings',
-        ],
-        'Volunteer initiative teaching HTML and CSS to non-technical staff',
+        'Retrieving lawsuit API data',
+        'Tracking deadlines',
+        'Monitoring legal public tax cases',
+        'Calculating potential savings',
       ],
+      'Volunteer initiative teaching HTML and CSS to non-technical staff',
     ],
 
     results: [
@@ -48,20 +46,15 @@ export default [
     end: '2022-01-01',
 
     description: [
+      'Mental health treatment app for women aged 45 and older',
       [
-        'Mental health treatment app for women aged 45 and older',
-        [
-          'Addressing only mild depression and mental health challenges',
-          'Educational content',
-          'Weekly online group therapy sessions',
-        ],
+        'Addressing only mild depression and mental health challenges',
+        'Educational content',
+        'Weekly online group therapy sessions',
       ],
     ],
 
-    results: [
-      'Assist in the acquisition and development of internal tools for multiple teams',
-      'Successfully persuaded CEO to adopt an Apple computer',
-    ],
+    results: ['Successfully persuaded CEO to adopt an Apple computer'],
 
     skills: ['React', 'Node.js', 'PostgreSQL', 'GraphQL', 'AWS'],
   },
@@ -74,14 +67,12 @@ export default [
     end: '2021-08-01',
 
     description: [
-      [
-        'Web app that simplifies income tax declarations in Germany',
-        ['Electronically submitting the final declaration to the tax office'],
-      ],
+      'Web app that simplifies income tax declarations in Germany',
+      ['Electronically submitting the final declaration to the tax office'],
     ],
 
     results: [
-      'Built landing pages with strict requirements of Google Lighthouse for SEO optimization',
+      'Built landing pages with strict requirements of Google Lighthouse for SEO optimization and usability',
     ],
 
     skills: ['React', ...commonSkills],
@@ -95,18 +86,16 @@ export default [
     end: '2020-08-01',
 
     description: [
+      'Recruiting platform for lawyers in Germany',
       [
-        'Recruiting platform for lawyers in Germany',
-        [
-          'Companies can post job openings and create profile pages',
-          'Goal: connect with and hire legal professionals',
-        ],
-        'Volunteer work teaching HTML/CSS/JS to refugees',
+        'Companies post job openings and create profile pages',
+        'Goal: connect with and hire legal professionals',
       ],
+      'Volunteer work teaching HTML/CSS/JS to refugees',
     ],
 
     results: [
-      'Full set of end-to-end testing development, essential for quality control in extensive software projects.',
+      'Full set of end-to-end testing development, covering most important features',
     ],
     skills: ['Angular.js', 'E2E Testing', ...commonSkills],
   },
@@ -119,18 +108,16 @@ export default [
     end: '2018-02-01',
 
     description: [
+      'User interface design and development for algorithmic trading platform Stratsphera',
       [
-        'User interface design and development for algorithmic trading platform Stratsphera',
-        [
-          'Implementation of a live Python coding interface for investment strategies',
-          'Included performance graphs providing practical insights',
-          'Winners of the contests receive substantial cash prizes',
-        ],
+        'Implementation of a live Python coding interface for investment strategies',
+        'Included performance graphs providing practical insights',
+        'Winners of the contests receive substantial cash prizes',
       ],
     ],
 
     results: [
-      'Projects carried out as a freelancer for former coworkers after relocating abroad.',
+      'Projects carried out as a freelancer for former coworkers after relocating abroad',
     ],
 
     skills: ['Angular', 'Protractor', ...commonSkills],
@@ -144,12 +131,10 @@ export default [
     end: '2017-10-01',
 
     description: [
+      'User interface initial development of education platform',
       [
-        'User interface initial development of education platform',
-        [
-          'Enabled teachers to plan lessons',
-          'Lessons were downloaded automatically to tablets kept inside public schools',
-        ],
+        'Enabled teachers to plan lessons in PDF format',
+        'Lessons were downloaded automatically to tablets kept inside public schools',
       ],
     ],
 
@@ -168,23 +153,17 @@ export default [
     end: '2016-05-01',
 
     description: [
-      "I have coordinated third-party developers in Unilever's team. F.biz is one of Unilever's two worldwide production partners, applying layout designs in its CMS platform to most websites of the brand's products, such as Sunsilk, Hellmann's, Cif, Vim, Surf, Lipton, and so on. I acted as point of contact between programmers, international back-end partner, local creative agencies and project team, operating as consultant of layout application viability on the platform.",
-
-      "I coordinated third-party developers within the Unilever team, specifically working with F.biz, one of the company's two global production partners. They apply layout designs on their CMS platform for many of Unilever's product websites, including Sunsilk, Hellmann's, Cif, Vim, Surf, Lipton, and more. In this role, I served as the main point of contact between programmers, our international back-end partner, local creative agencies, and the project team, consulting on the feasibility of layout applications on the platform.",
-
+      "Team coordination for the development and maintenance of software within Unilever's CMS department",
       [
-        "Team coordination for the development and maintenance of software within Unilever's CMS department",
-        [
-          'Evaluation of design application viability',
-          'Assistance with utilizing the CMS',
-          "Management of development of local product websites of Unilever's multiple brands and countries",
-          'Point of contact between foreigner back-end partner, local advertising agencies and third-party developers',
-        ],
+        'Evaluation of design application viability',
+        'Assistance with CMS use',
+        "Management of development of local product websites of Unilever's multiple brands and countries",
+        'Point of contact between foreigner back-end partner, local advertising agencies and third-party developers',
       ],
     ],
 
     results: [
-      "Successful development and maintenance of websites in multiple languages of products such as Sunsilk, Hellmann's, Cif, Vim, Surf, Lipton, and so on.",
+      "Successful development and maintenance of websites in multiple languages of products such as Sunsilk, Hellmann's, Cif, Vim, Surf, Lipton, etc...",
     ],
 
     skills: ['Coordination', 'English'],
@@ -197,14 +176,13 @@ export default [
     end: '2015-07-01',
 
     description: [
-      [
-        'Front-end development and maintenance of inumerous websites and landing pages',
-        'Development of components independenlty in a "storybook" like documentation platform',
-      ],
+      'Front-end development and maintenance of inumerous websites and landing pages',
+      'Development of components independenlty in a "storybook" like documentation platform',
+      'Development of ads for digital magazines',
     ],
 
     results: [
-      'Successful development of software for large brazilian and international companies like Zattini, Unilever, Subaru, Toddynho, Multiplus, Claro, NET, on so on.',
+      'Delivered work for companies like Netshoes, Zattini, Unilever, Subaru, Toddynho, Multiplus, Claro and NET',
     ],
 
     skills: ['jQuery'],
@@ -218,17 +196,17 @@ export default [
     end: '2014-06-01',
 
     description: [
+      'Development of comparacaodefundos.com, web solution for analyzing and comparing investment funds data',
       [
-        'Development of comparacaodefundos.com, web solution for analyzing and comparing investment funds data',
-        [
-          'Data retrieved from government agency CVM',
-          'Development of a tool to simulate investment fund amounts',
-          'Automation, simplification and validation of investment funds registration paperwork',
-        ],
+        'Development of a tool to simulate investment fund amounts',
+        'Automation, simplification and validation of investment funds registration paperwork',
       ],
     ],
 
-    results: ['Maintained a symbolic stock option in recognition of the work.'],
+    results: [
+      'Significantly reduced errors in filled-out documentation for fund investments',
+      'Maintained a symbolic stock option in recognition of the work',
+    ],
 
     skills: ['Backbone.js', 'Node.js', 'Redis', ...commonSkills],
   },
@@ -241,18 +219,17 @@ export default [
     end: '2011-12-01',
 
     description: [
-      [
-        'Design and front-end development of proprietary CMS websites',
-        'Largest company within the incubator at the Federal University of Itajubá',
-        'Pixel-perfect development',
-        'Highly rigid design principles.',
-      ],
+      'Design and front-end development of proprietary CMS websites',
+      'Largest company within the incubator at the Federal University of Itajubá',
+      'Pixel-perfect development',
+      'Highly rigid design principles',
     ],
 
     results: [
-      'Projects designed by me:',
-      '/print-mk.jpg',
-      '/print-authosp.jpg',
+      'My design:',
+      { src: '/print-mk.jpg' },
+      // { src: '/print-mk.jpg' },
+      // '/print-authosp.jpg',
     ],
 
     skills: ['Web design', 'jQuery'],

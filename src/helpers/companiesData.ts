@@ -15,12 +15,14 @@ export default map
 function getLocatelliData(name: string) {
   return {
     company: name,
+
     logoShortPath: '/logo/short/logo-locatelli-min.png',
     logoPath: '/logo/logo-locatelli.svg',
-    logoPadding: '15px',
+    logoColor: '#E94E25',
+    logoWidth: '170px',
+
     sector: 'Tax law',
     location: 'São Paulo, Brazil',
-    logoColor: '#E94E25',
     percentage: 19.6,
     year: 2024,
   }
@@ -29,11 +31,14 @@ function getLocatelliData(name: string) {
 function getTildaData(name: string) {
   return {
     company: name,
+
     logoShortPath: '/logo/tilda.png',
     logoPath: '/logo/tilda.png',
+    logoColor: '#409B88',
+    logoWidth: '60px',
+
     location: 'Berlin, Germany',
     sector: 'Mental health',
-    logoColor: '#409B88',
     percentage: 2.8,
   }
 }
@@ -41,12 +46,14 @@ function getTildaData(name: string) {
 function getWundertaxData(name: string) {
   return {
     company: name,
+
     logoShortPath: '/logo/short/wundertax.png',
     logoPath: '/logo/wundertax.svg',
-    logoPadding: '10px',
+    logoColor: '#41CB9C',
+    logoWidth: '200px',
+
     sector: 'Income tax',
     location: 'Berlin, Germany',
-    logoColor: '#41CB9C',
     percentage: 6.7,
   }
 }
@@ -54,11 +61,14 @@ function getWundertaxData(name: string) {
 function getTalentRocketData(name: string) {
   return {
     company: name,
+
     logoShortPath: '/logo/short/talentrocket.png',
     logoPath: '/logo/talentrocket.png',
-    sector: 'Lawyer recruiting',
-    location: 'Munich, Germany',
     logoColor: '#04182B',
+    logoWidth: '80px',
+
+    sector: 'Lawyer recruitment',
+    location: 'Munich, Germany',
     percentage: 16.8,
   }
 }
@@ -68,6 +78,8 @@ function getBtgData(name: string) {
     company: name,
     logoShortPath: '/logo/short/btg.png',
     logoPath: '/logo/btg.png',
+    logoWidth: '150px',
+
     via: {
       name: 'BRQ',
       logoPath: '/logo/brq.png',
@@ -84,6 +96,8 @@ function getMiraData(name: string) {
     company: name,
     sector: 'Education',
     logoShortPath: '/logo/short/mira.jpeg',
+    logoWidth: '150px',
+
     logoPath: '/logo/mira.png',
     location: 'São Paulo, Brazil',
     logoColor: '#F6892B',
@@ -94,11 +108,12 @@ function getMiraData(name: string) {
 function getFbizData(name: string) {
   return {
     company: name,
-    sector: 'Advertising agency',
+    sector: 'Advertising',
     location: 'São Paulo, Brazil',
     logoShortPath: '/logo/short/fbiz.jpg',
     logoPath: '/logo/short/fbiz.jpg',
     logoColor: '#FADD02',
+    logoWidth: '60px',
     percentage: 12.8,
   }
 }
@@ -108,9 +123,11 @@ function getVeriosData(name: string) {
     company: name,
     sector: 'Investments',
     logoShortPath: '/logo/short/verios.jpeg',
+    logoPath: '/logo/verios.png',
     location: 'São Paulo, Brazil',
     logoColor: '#3EB9BD',
     percentage: 16.8,
+    logoWidth: '130px',
   }
 }
 
@@ -119,10 +136,12 @@ function getB2mlData(name: string) {
     company: name,
     sector: 'Software development',
     logoShortPath: '/logo/short/b2ml.png',
+    logoPath: '/logo/b2ml.png',
     location: 'Itajubá, Brazil',
     logoColor: '#282828',
     percentage: 12.8,
     year: 2010,
     first: true,
+    logoWidth: '130px',
   }
 }

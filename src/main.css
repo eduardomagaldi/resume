@@ -47,3 +47,8 @@ h6 {
 .ml-5 {
   margin-left: 5px !important;
 }
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
