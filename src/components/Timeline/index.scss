@@ -50,19 +50,7 @@
   display: flex;
   align-items: center;
   padding: 5px;
-}
-
-.tooltip.logo-only {
-  width: 35px;
-}
-
-.tooltip.logo-only .logo {
-  width: 35px;
-  width: 100%;
-}
-
-.tooltip.logo-text .logo {
-  width: 26px;
+  overflow: hidden;
 }
 
 .logo {
@@ -90,9 +78,14 @@
   padding: 0 5px 0 5px;
 }
 
-.timeline-skills {
+.logo-only .icon {
+  margin: 0;
+}
+
+.timeline-skills,
+.timeline-positions {
   .timeline-item:nth-child(even) .tooltip {
-    margin-top: -56px;
+    margin-top: -50px;
   }
 
   .timeline-item:nth-child(odd) .tooltip {
@@ -102,9 +95,25 @@
   .logo {
     width: 20px;
   }
+
+  .backbone .icon {
+    width: 16px;
+    margin-right: 0;
+    padding: 2px;
+  }
+
+  .fullstack .icon {
+    width: 18px;
+    padding: 1px;
+  }
 }
 
 .timeline-country {
+  .icon {
+    width: 26px;
+    padding: 2px;
+  }
+
   .timeline-item:nth-child(even) .tooltip {
     margin-top: -49px;
   }
@@ -114,7 +123,41 @@
   }
 }
 
+.timeline-skills,
+.timeline-positions,
+.timeline-country {
+  .tooltip.logo-text {
+    padding-right: 8px;
+  }
+}
+
 .timeline-experience {
+  .icon {
+    width: 30px;
+    margin: 0;
+    padding: 2px;
+  }
+
+  .locatelli .icon {
+    padding: 4px;
+    width: 26px;
+  }
+
+  .tilda .icon {
+    padding: 0;
+    width: 34px;
+  }
+
+  .fbiz .icon {
+    padding: 0;
+    width: 34px;
+  }
+
+  .btg .icon {
+    padding: 1px;
+    width: 32px;
+  }
+
   .timeline-item:nth-child(even) .tooltip {
     margin-top: -65px;
   }
@@ -124,16 +167,16 @@
   }
 }
 
-.timeline-positions {
-  .timeline-item:nth-child(even) .tooltip {
-    margin-top: -56px;
-  }
+// .timeline-positions {
+//   .timeline-item:nth-child(even) .tooltip {
+//     margin-top: -56px;
+//   }
 
-  .timeline-item:nth-child(odd) .tooltip {
-    margin-top: 4px;
-  }
+//   .timeline-item:nth-child(odd) .tooltip {
+//     margin-top: 4px;
+//   }
 
-  .tooltip .logo {
-    width: 30px;
-  }
-}
+//   .tooltip .logo {
+//     width: 30px;
+//   }
+// }

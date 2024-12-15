@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router'
-import './index.css'
+import './index.scss'
 
 export default function Layout() {
   return <Outlet />

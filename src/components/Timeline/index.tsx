@@ -1,3 +1,4 @@
+import IconText from '../IconText'
 import './index.scss'
 
 export default ({ data }: { data: any }) => {
@@ -34,32 +35,15 @@ export default ({ data }: { data: any }) => {
                 borderColor: item.logoColor,
               }}
             >
-              {item.logoShortPath && (
-                <img className="logo" src={item.logoShortPath} />
-              )}
-              {item.text && (
-                <div className={'text' + (item.onlyText ? ' text-only' : '')}>
-                  {item.text}
-                </div>
-              )}
+              <IconText
+                iconPath={item.logoShortPath}
+                text={item.text}
+                className={item.className}
+              />
             </div>
           </div>
         ))}
       </div>
-
-      {/* <div>
-        {Array.from(data).map((item: any, index: number) => (
-          <div
-            key={'timeline-item-' + index}
-            style={{
-              width: item[1].percentage + '%',
-              margin: '10px',
-            }}
-          >
-            {item[0]} {((item[1].percentage / 100) * 176) / 12}
-          </div>
-        ))}
-      </div> */}
     </>
   )
 }

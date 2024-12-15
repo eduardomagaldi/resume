@@ -4,9 +4,10 @@ interface Props {
   iconPath: string
   text?: string
   href?: string
+  className?: string
 }
 
-export default ({ iconPath, text, href }: Props) => {
+export default ({ iconPath, text, href, className }: Props) => {
   let textOutput
 
   if (href) {
@@ -34,7 +35,7 @@ export default ({ iconPath, text, href }: Props) => {
   }
 
   return (
-    <div className="d-flex icon-text">
+    <div className={'d-flex icon-text ' + className}>
       <img src={iconPath} className="icon" style={style} />
       {textOutput}
     </div>

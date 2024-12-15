@@ -1,6 +1,7 @@
 import Timeline from '../../components/Timeline'
 import Ruler from '../../components/Ruler'
 import Experience from '../../components/Experience'
+import positionsData from '../../helpers/positionsData'
 
 import './index.scss'
 
@@ -16,6 +17,11 @@ companiesMap.forEach((value) => {
 const countryTimelineData = getCountryTimelineData()
 const skillsTimelineData = getSkillsTimelineData()
 const positionsTimelineData = getPositionsTimelineData()
+
+const page2Data = [positionsData[0], positionsData[1]]
+const page3Data = [positionsData[2], positionsData[3], positionsData[4]]
+const page4Data = [positionsData[5], positionsData[6]]
+const page5Data = [positionsData[7], positionsData[8]]
 
 export default function App() {
   return (
@@ -151,7 +157,7 @@ export default function App() {
 
                     {/* <IconText iconPath="/git.png" text="GIT" /> */}
                     <div className="icon-text">
-                      GIT, Responsive pages, AJAX, REST APIs
+                      GIT, Responsive pages, AJAX, RESTful APIs
                     </div>
                   </div>
                 </div>
@@ -212,7 +218,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="section-top">
+              <div className="section-top section-contact">
                 <div className="section-inner">
                   <Contact />
                 </div>
@@ -247,9 +253,9 @@ export default function App() {
                       <div>Bachelor's degree in</div>
                       <strong>Computer Engineering</strong>
                       <div className="d-flex">
-                        <IconText iconPath="/calendar.png" text="2008 - " />
-                        &nbsp;
-                        <IconText iconPath="/calendar.png" text="2012" />
+                        {/* <IconText iconPath="/calendar.png" text="2008 - " /> */}
+                        2008 - 2012
+                        {/* <IconText iconPath="/calendar.png" text="2012" /> */}
                       </div>
                     </div>
 
@@ -287,7 +293,63 @@ export default function App() {
                 </h2>
               </div>
 
-              <Experience />
+              <Experience companies={page2Data} />
+
+              <div className="pagination">Page 2 / 5</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="size-a4 page-detail">
+        <div className="wrapper-inner-page">
+          <div className="section">
+            <div className="section-inner">
+              <HeaderShort />
+            </div>
+          </div>
+
+          <div className="section-wrapper">
+            <div className="section-inner w-100">
+              <Experience companies={page3Data} />
+
+              <div className="pagination">Page 3 / 5</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="size-a4 page-detail">
+        <div className="wrapper-inner-page">
+          <div className="section">
+            <div className="section-inner">
+              <HeaderShort />
+            </div>
+          </div>
+
+          <div className="section-wrapper">
+            <div className="section-inner w-100">
+              <Experience companies={page4Data} />
+
+              <div className="pagination">Page 4 / 5</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="size-a4 page-detail">
+        <div className="wrapper-inner-page">
+          <div className="section">
+            <div className="section-inner">
+              <HeaderShort />
+            </div>
+          </div>
+
+          <div className="section-wrapper">
+            <div className="section-inner w-100">
+              <Experience companies={page5Data} />
+
+              <div className="pagination">Page 5 / 5</div>
             </div>
           </div>
         </div>
@@ -370,17 +432,18 @@ function getCountryTimelineData() {
   return [
     {
       percentage: 19.6,
-
       year: 2024,
       logoColor: '#2a742a',
       logoShortPath: '/brazil-flag.svg',
-      text: 'Brazil - 3 years',
+      text: 'Brazil - 11 years',
+      className: 'brazil',
     },
     {
       percentage: 26.3,
       logoColor: '#DD2327',
       logoShortPath: '/germany-flag.svg',
       text: 'Germany - 4 years',
+      className: 'germany',
     },
     {
       percentage: 54.1,
@@ -388,7 +451,8 @@ function getCountryTimelineData() {
       year: 2010,
       logoColor: '#2a742a',
       logoShortPath: '/brazil-flag.svg',
-      text: 'Brazil - 8 years',
+      logoOnly: true,
+      className: 'brazil-flag-only',
     },
   ]
 }
@@ -427,13 +491,13 @@ function getSkillsTimelineData() {
       logoColor: '#002A41',
       logoShortPath: '/backbonejs.png',
       text: 'Backbone.js',
+      className: 'backbone',
     },
 
     {
       percentage: 12.8,
       logoColor: '#2A73B4',
       logoShortPath: '/jquery.png',
-      text: '',
     },
   ]
 }
@@ -444,26 +508,25 @@ function getPositionsTimelineData() {
       text: 'Full-stack',
       logoShortPath: '/fullstack.png',
       percentage: 19.6 + 2.8,
-      logoColor: 'green',
+      logoColor: '#18356e',
       year: 2024,
+      className: 'fullstack',
     },
     {
       text: 'Front-end',
       percentage: 12.8 + 6.7 + 16.8 + 2.2 + 9.5,
-      logoColor: '#234a96',
-
+      logoColor: '#DD2327',
       logoShortPath: '/html.png',
     },
     {
-      text: 'Full-stack',
       percentage: 16.8,
-      logoColor: 'green',
-
+      logoColor: '#18356e',
       logoShortPath: '/fullstack.png',
+      className: 'fullstack',
     },
     {
       percentage: 12.8,
-      logoColor: '#234a96',
+      logoColor: '#DD2327',
       logoShortPath: '/html.png',
     },
   ]
@@ -482,7 +545,7 @@ function Profile() {
       <ul className="list-content list-content-first-page">
         <li>
           Experienced front-end developer with great enthusiasm for{' '}
-          <strong>Design</strong>, <strong>UI</strong>, and <strong>UX</strong>.
+          <strong>Design</strong>, <strong>UI</strong>, and <strong>UX</strong>
         </li>
 
         <li>
@@ -490,20 +553,19 @@ function Profile() {
           <a href="https://cantunsee.space/" target="_blank">
             attention to detail
           </a>
-          .
         </li>
 
         <li>
-          Familiarity with <strong>RESTful back-end</strong> and{' '}
-          <strong>databases</strong>.
+          Familiarity with <strong>RESTful back-ends</strong> and{' '}
+          <strong>databases</strong>
         </li>
 
         <li>
-          <strong>Web design</strong> competences.
+          <strong>Web design</strong> competences
         </li>
         <li>
-          Fluent in <strong>English</strong> and <strong>Portuguese</strong>{' '}
-          with good communication skills.
+          Fluent in <strong>English</strong> and <strong>Portuguese</strong>,{' '}
+          with good communication skills
         </li>
       </ul>
     </>
@@ -522,29 +584,52 @@ function Contact() {
 
       <div className="email-wrapper">
         <img className="icon-email" src="/email.png" />
-        <a className="email" href="mailto:magaldi1989@gmail.com">
+        <a
+          className="email"
+          href="mailto:magaldi1989@gmail.com"
+          target="_blank"
+        >
           magaldi1989<small>@gmail.com</small>
         </a>
       </div>
 
       <div className="email-wrapper phone-wrapper">
         <img className="icon-whatsapp" src="/whatsapp.png" />
-        <a className="email" href="tel:+5511912725949">
+        <a className="email" href="tel:+5511912725949" target="_blank">
           +55 11 91272 5949
         </a>
       </div>
 
       <div className="email-wrapper phone-wrapper">
         <img className="icon-whatsapp" src="/linkedin.png" />
-        <a className="email" href="https://www.linkedin.com/in/eduardomagaldi">
+        <a
+          className="email"
+          href="https://www.linkedin.com/in/eduardomagaldi"
+          target="_blank"
+        >
           /in/eduardomagaldi
         </a>
       </div>
 
       <div className="email-wrapper phone-wrapper">
         <img className="icon-whatsapp" src="/github.png" />
-        <a className="email" href="https://github.com/eduardomagaldi">
+        <a
+          className="email"
+          href="https://github.com/eduardomagaldi"
+          target="_blank"
+        >
           /eduardomagaldi
+        </a>
+      </div>
+
+      <div className="email-wrapper phone-wrapper">
+        <img className="icon-whatsapp" src="/globe.png" />
+        <a
+          className="email"
+          href="https://eduardomagaldi.github.io/eduardomagaldi.com.br/"
+          target="_blank"
+        >
+          Portfolio website
         </a>
       </div>
 
@@ -553,9 +638,7 @@ function Contact() {
         <span>Juiz de Fora, Brazil</span>
       </div>
 
-      <div className="section-pagination">
-        <div>Page 1 / 4</div>
-      </div>
+      <div className="email-wrapper phone-wrapper pagination">Page 1 / 5</div>
     </>
   )
 }

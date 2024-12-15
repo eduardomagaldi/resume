@@ -17,7 +17,7 @@
 
 .wrapper-content {
   box-sizing: border-box;
-  max-width: 95%;
+  width: 100%;
 }
 
 .bar-exp {
@@ -31,12 +31,21 @@
   display: flex;
   margin-top: 5px;
 
-  &:first-child .bar-exp {
-    border-radius: 10px 10px 0 0;
-  }
-
+  &.wrapper-exp-first,
   &:first-child {
     margin-top: 0;
+  }
+
+  &.wrapper-exp-first {
+    .bar-exp {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  &.wrapper-exp-last {
+    .bar-exp {
+      border-radius: 0 0 10px 10px;
+    }
   }
 }
 
@@ -48,8 +57,7 @@
   padding: 20px;
   border-radius: 0 120px 120px 120px;
   box-sizing: border-box;
-
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .wrapper-company-info {
@@ -67,16 +75,12 @@
 }
 
 .description {
-  width: 70%;
+  width: 100%;
 }
 
 .results {
-  width: 30%;
   margin-left: 20px !important;
-
-  & > li > .list-content > li {
-    margin-top: 10px;
-  }
+  max-width: 137px;
 }
 
 .wrapper-experience-inner {
@@ -89,6 +93,27 @@
   margin-left: 20px;
   display: flex;
   align-items: center;
+
+  .icon {
+    width: 15px;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+
+  .icon-text {
+    margin-right: 3px;
+  }
+
+  .flag {
+    margin-right: 0;
+
+    .icon {
+      width: 20px;
+      border: 1px solid;
+      border-radius: 3px;
+      margin-right: 4px;
+    }
+  }
 }
 
 .logo-large {
@@ -98,6 +123,7 @@
 .my-design {
   width: 160px;
   border: 1px solid;
+  border-radius: 5px;
 }
 
 .divider {
@@ -115,6 +141,87 @@
   font-size: 18px;
 }
 
-.list-content.child {
-  margin-bottom: 10px;
+// .list-content.child {
+//   margin-bottom: 10px;
+// }
+
+// .stack {
+//   margin-top: 10px;
+// }
+
+.stack-inner {
+  display: flex;
+
+  .icon-text {
+    // margin-right: 10px;
+  }
+}
+
+.stack-title {
+  text-wrap: nowrap;
+  margin-right: 10px;
+}
+
+.b2ml {
+  .results {
+    max-width: 200px;
+  }
+}
+
+.string:has(+ .parent) {
+  margin-bottom: 3px;
+}
+
+.child .string {
+  margin-bottom: 3px;
+}
+
+.wrapper-stack {
+  display: flex;
+}
+
+.list-content.list-stack {
+  width: 138px;
+  margin-left: 20px;
+}
+
+.company-name {
+  font-size: 18px;
+}
+
+.list-stack-inner.list-content {
+  // background-color: yellow;
+
+  li {
+    margin-bottom: 3px;
+  }
+}
+
+.header-company {
+  width: 100%;
+}
+
+.wrapper-inner-position {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.wrapper-positions {
+  margin: 20px 0;
+}
+
+.wrapper-experience.tilda {
+  // background-color: yellow;
+  height: 329px;
+}
+
+.wrapper-experience.btg {
+  // background-color: yellow;
+  height: 357px;
+}
+
+.wrapper-experience.fbiz {
+  // background-color: yellow;
+  height: 661px;
 }

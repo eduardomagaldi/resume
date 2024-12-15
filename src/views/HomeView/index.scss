@@ -1,14 +1,12 @@
 .title {
   font-size: 50px;
   line-height: 45px;
-  /* background-color: yellow; */
 }
 
 .big h1 {
   margin: 0;
   line-height: 90px;
   font-size: 110px;
-  /* background-color: yellow; */
 }
 
 .header {
@@ -91,10 +89,11 @@
   border-radius: 3px;
 }
 
-.bubble {
+.map .bubble {
   position: absolute;
-  top: 0;
-  left: 0;
+}
+
+.bubble {
   border-radius: 50px 50px 50px 0;
   transform: rotate(45deg);
   background-color: #18356e;
@@ -119,7 +118,7 @@
 .bubble .img {
   width: 22px;
   height: 22px;
-  border: 4px solid white;
+  border: 3px solid white;
   border-radius: 40px;
   transform: rotate(-45deg);
   /* width: 10px;
@@ -366,31 +365,30 @@
   margin-right: 10px;
 }
 
-// .title-main-skills {
-//   margin-top: 0;
-//   margin-bottom: 10px;
-// }
-
 .icon-backbone {
   width: 14px;
   height: 14px;
 }
 
 .list-content {
-  padding: 0 0 0 14px;
   margin: 0;
-}
+  padding: 0 0 0 18px;
 
-.list-content-first-page li {
-  margin-bottom: 10px;
-}
+  &.list-content-first-page {
+    padding: 0 0 0 17px;
+  }
 
-.list-content li:last-child {
-  margin-bottom: 0;
-}
+  li {
+    margin-bottom: 10px;
+  }
 
-.parent {
-  list-style: none;
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  .parent {
+    list-style: none;
+  }
 }
 
 a {
@@ -424,13 +422,13 @@ a {
 }
 
 .phone-wrapper {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .section-pagination {
   justify-content: end;
   display: flex;
-  height: 45px;
+  height: 38px;
   align-items: end;
 }
 
@@ -481,7 +479,23 @@ a {
   width: 100%;
 }
 
-// .string {
-//   // margin-top: 10px;
-//   // text-wrap: balance;
-// }
+.section-contact {
+  // height: 281px;
+}
+
+.pagination {
+  text-align: right;
+  width: 100%;
+  display: block;
+  font-size: 14px;
+  margin-top: 11px;
+}
+
+.page-detail {
+  .pagination {
+    position: absolute;
+    right: 41px;
+    bottom: 41px;
+    width: auto;
+  }
+}
