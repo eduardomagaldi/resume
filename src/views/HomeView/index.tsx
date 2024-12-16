@@ -7,6 +7,7 @@ import './index.scss'
 
 import companiesMap from '../../helpers/companiesData'
 import IconText from '../../components/IconText'
+import IconTextTitle from '../../components/IconTextTitle'
 
 const timelineData: any[] = []
 
@@ -26,7 +27,7 @@ const page5Data = [positionsData[7], positionsData[8]]
 export default function App() {
   return (
     <>
-      <div className="size-a4">
+      <div className="size-a4 page-first">
         <div className="wrapper-inner-page">
           <div className="section">
             <div className="section-inner">
@@ -56,60 +57,9 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="section-top">
+              <div className="section-top section-skills">
                 <div className="section-inner">
-                  <div className="title-styled-wrapper title-main-skills">
-                    <h2 className="title-styled">
-                      <img className="icon-skills" src="/skills.png" />
-                      <div className="title-styled-text mt-10 title-other-skills">
-                        MAIN SKILLS
-                      </div>
-                    </h2>
-                  </div>
-
-                  {/* <div className="skill-wrapper">
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <div className="icon-wrapper-react">
-                          <img src="/html.png" className="icon-small-2" />
-                        </div>
-                      </div>
-                      <div>HTML</div>
-                    </div>
-
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <div className="icon-wrapper-react">
-                          <img src="/css.png" className="icon-small-2" />
-                        </div>
-                      </div>
-                      <div>CSS</div>
-                    </div>
-
-                    <div className="skill">
-                      <div className="icon-wrapper">
-                        <div className="icon-wrapper-react">
-                          <img src="/javascript.png" className="icon-small-2" />
-                        </div>
-                      </div>
-                      <div>JavaScript</div>
-                    </div>
-                  </div> */}
-
-                  {/* <hr /> */}
-
-                  {/* 
-                  
-                  
-                  
-                  <IconText iconPath="/backbonejs.png" text="Backbone.js" />
-                  <IconText iconPath="/jquery.png" text="jQuery" />
-                   */}
-
-                  {/* 
-                  
-                  
-                   */}
+                  <IconTextTitle iconPath="skills.png" text="MAIN SKILLS" />
 
                   <div className="skill-wrapper">
                     <IconText iconPath="/html.png" text="HTML" />
@@ -186,7 +136,6 @@ export default function App() {
             <div className="section-right">
               <div className="section-inner">
                 <div className="bachelor">
-                  <img className="icon-education" src="/education.svg" />
                   <div className="bachelor-text">
                     <div>Bachelor's</div>
                     <div>degree in</div>
@@ -194,7 +143,8 @@ export default function App() {
                 </div>
 
                 <div className="course-wrapper">
-                  <h1 className="course">COMPUTER ENGINEERING</h1>
+                  <IconTextTitle iconPath="education2.png" text="COMPUTER" />
+                  <h1 className="engineering">ENGINEERING</h1>
                   <div className="at">at</div>
                 </div>
 
@@ -212,7 +162,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="section-top">
+              <div className="section-top section-profile">
                 <div className="section-inner">
                   <Profile />
                 </div>
@@ -236,16 +186,10 @@ export default function App() {
             </div>
           </div>
 
-          <div className="section">
+          <div className="section section-education">
             <div className="section-wrapper">
               <div className="section-inner w-100">
-                <div className="title-styled-wrapper">
-                  <h2 className="title-styled">
-                    {/* <img className="icon-profile" src="/education.png" /> */}
-                    <img className="icon-education" src="/education.svg" />
-                    <div className="title-styled-text">EDUCATION</div>
-                  </h2>
-                </div>
+                <IconTextTitle iconPath="education2.png" text="EDUCATION" />
 
                 <div className="wrapper-education">
                   <div className="wrapper-education-inner">
@@ -284,14 +228,9 @@ export default function App() {
             </div>
           </div>
 
-          <div className="section-wrapper">
+          <div className="section-wrapper section-education">
             <div className="section-inner w-100">
-              <div className="title-styled-wrapper">
-                <h2 className="title-styled">
-                  <img className="icon-education" src="/work.png" />
-                  <div className="title-styled-text">EXPERIENCE</div>
-                </h2>
-              </div>
+              <IconTextTitle iconPath="work2.png" text="EXPERIENCE" />
 
               <Experience companies={page2Data} />
 
@@ -535,12 +474,14 @@ function getPositionsTimelineData() {
 function Profile() {
   return (
     <>
-      <div className="title-styled-wrapper">
+      {/* <div className="title-styled-wrapper">
         <h2 className="title-styled">
           <img className="icon-profile" src="/profile.png" />
           <div className="title-styled-text">PROFILE</div>
         </h2>
-      </div>
+      </div> */}
+
+      <IconTextTitle iconPath="profile.png" text="PROFILE" />
 
       <ul className="list-content list-content-first-page">
         <li>
@@ -575,12 +516,14 @@ function Profile() {
 function Contact() {
   return (
     <>
-      <div className="title-styled-wrapper">
+      {/* <div className="title-styled-wrapper">
         <h2 className="title-styled">
           <img className="icon-profile" src="/phone.png" />
           <div className="title-styled-text">CONTACT INFO</div>
         </h2>
-      </div>
+      </div> */}
+
+      <IconTextTitle iconPath="phone.png" text="CONTACT INFO" />
 
       <div className="email-wrapper">
         <img className="icon-email" src="/email.png" />

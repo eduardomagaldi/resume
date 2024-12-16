@@ -1,0 +1,23 @@
+// .icon-text {
+//   text-wrap: nowrap;
+// }
+
+// .icon {
+//   width: 20px;
+//   margin-right: 3px;
+// }
+
+.icon-text-title {
+  line-height: 24px;
+
+  .icon {
+    width: 24px;
+    margin-right: 5px;
+  }
+
+  .text {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+  }
+}
