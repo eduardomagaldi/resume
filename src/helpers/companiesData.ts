@@ -144,7 +144,7 @@ function getB2mlData(name: string) {
   return {
     company: name,
     className: 'b2ml',
-    sector: 'Software development',
+    sector: 'Software',
     logoShortPath: '/logo/short/b2ml.png',
     logoPath: '/logo/b2ml.png',
     city: 'Itajubá',

@@ -486,7 +486,7 @@ function Profile() {
       <ul className="list-content list-content-first-page">
         <li>
           Experienced front-end developer with great enthusiasm for{' '}
-          <strong>Design</strong>, <strong>UI</strong>, and <strong>UX</strong>
+          <strong>Design</strong>, <strong>UI</strong>, and <strong>UX</strong>.
         </li>
 
         <li>
@@ -494,19 +494,20 @@ function Profile() {
           <a href="https://cantunsee.space/" target="_blank">
             attention to detail
           </a>
+          .
         </li>
 
         <li>
           Familiarity with <strong>RESTful back-ends</strong> and{' '}
-          <strong>databases</strong>
+          <strong>databases</strong>.
         </li>
 
         <li>
-          <strong>Web design</strong> competences
+          <strong>Web design</strong> competences.
         </li>
         <li>
           Fluent in <strong>English</strong> and <strong>Portuguese</strong>,{' '}
-          with good communication skills
+          with good communication skills.
         </li>
       </ul>
     </>
@@ -538,7 +539,11 @@ function Contact() {
 
       <div className="email-wrapper phone-wrapper">
         <img className="icon-whatsapp" src="/whatsapp.png" />
-        <a className="email" href="tel:+5511912725949" target="_blank">
+        <a
+          className="email"
+          href="https://wa.me/+5511912725949"
+          target="_blank"
+        >
           +55 11 91272 5949
         </a>
       </div>
