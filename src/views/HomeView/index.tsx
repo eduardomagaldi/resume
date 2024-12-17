@@ -357,19 +357,18 @@ function Header() {
         <div className="last">MAGALDI</div>
       </h1>
 
-      <h1 className="title education">
+      {/* <h1 className="title education">
         <div>SOFTWARE</div>
 
-        <div className="line-second">
-          DEVELOPER
-          <div className="ball"></div>
-        </div>
+        <div className="line-second">DEVELOPER</div>
       </h1>
 
       <h1 className="title skills">
         <div className="line-1">HTML / CSS</div>
         <div>JAVASCRIPT</div>
-      </h1>
+      </h1> */}
+
+      <img className="software" src="/softwaredeveloper.png" />
 
       <div className="map">
         {/* <img className="map-img map-img-green" src="/world-green.svg" /> */}

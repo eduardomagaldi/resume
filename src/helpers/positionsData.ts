@@ -113,7 +113,7 @@ export default [
             'Full set of end-to-end testing development, covering most important features.',
           ],
         ],
-        descriptionShort: ['Recruiting platform for lawyers in Germany.'],
+        descriptionShort: ['Lawyer recruiting platform.'],
         stack: [
           { name: 'Angular', img: '/angular.png' },
           { name: 'Protractor', img: '/protractor.png' },
