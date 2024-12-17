@@ -1,14 +1,13 @@
 const map = new Map()
-
-map.set('Locatelli Advogados', getLocatelliData('Locatelli Advogados'))
-map.set('Tilda', getTildaData('Tilda'))
-map.set('Wundertax', getWundertaxData('Wundertax'))
-map.set('Talent Rocket', getTalentRocketData('Talent Rocket'))
-map.set('BTG Pactual', getBtgData('BTG Pactual'))
-map.set('Mira Educação', getMiraData('Mira Educação'))
-map.set('F.biz', getFbizData('F.biz'))
-map.set('Vérios', getVeriosData('Vérios'))
 map.set('B2ml Sistemas', getB2mlData('B2ml Sistemas'))
+map.set('Vérios', getVeriosData('Vérios'))
+map.set('F.biz', getFbizData('F.biz'))
+map.set('Mira Educação', getMiraData('Mira Educação'))
+map.set('BTG Pactual', getBtgData('BTG Pactual'))
+map.set('Talent Rocket', getTalentRocketData('Talent Rocket'))
+map.set('Wundertax', getWundertaxData('Wundertax'))
+map.set('Tilda', getTildaData('Tilda'))
+map.set('Locatelli Advogados', getLocatelliData('Locatelli Advogados'))
 
 export default map
 

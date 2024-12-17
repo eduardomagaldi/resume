@@ -62,11 +62,13 @@
 
 .year {
   margin-top: -19px;
+  width: 100%;
+  text-align: right;
 }
 
 .first {
-  width: 100%;
-  text-align: right;
+  width: auto;
+  text-align: left;
 }
 
 .text {
@@ -115,7 +117,7 @@
   }
 
   .timeline-item:nth-child(even) .tooltip {
-    margin-top: -49px;
+    margin-top: -51px;
   }
 
   .timeline-item:nth-child(odd) .tooltip {
@@ -159,7 +161,7 @@
   }
 
   .timeline-item:nth-child(even) .tooltip {
-    margin-top: -65px;
+    margin-top: -64px;
   }
 
   .timeline-item:nth-child(odd) .tooltip {

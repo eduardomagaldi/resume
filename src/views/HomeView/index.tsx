@@ -370,21 +370,6 @@ function HeaderShort() {
 function getCountryTimelineData() {
   return [
     {
-      percentage: 19.6,
-      year: 2024,
-      logoColor: '#2a742a',
-      logoShortPath: '/brazil-flag.svg',
-      text: 'Brazil - 11 years',
-      className: 'brazil',
-    },
-    {
-      percentage: 26.3,
-      logoColor: '#DD2327',
-      logoShortPath: '/germany-flag.svg',
-      text: 'Germany - 4 years',
-      className: 'germany',
-    },
-    {
       percentage: 54.1,
       first: true,
       year: 2010,
@@ -392,6 +377,24 @@ function getCountryTimelineData() {
       logoShortPath: '/brazil-flag.svg',
       logoOnly: true,
       className: 'brazil-flag-only',
+      text: 'Brazil - 11 years',
+    },
+
+    {
+      percentage: 26.3,
+      logoColor: '#DD2327',
+      logoShortPath: '/germany-flag.svg',
+      text: 'Germany - 4 years',
+      className: 'germany',
+    },
+
+    {
+      percentage: 19.6,
+      year: 2024,
+      logoColor: '#2a742a',
+      logoShortPath: '/brazil-flag.svg',
+
+      className: 'brazil',
     },
   ]
 }
@@ -399,29 +402,11 @@ function getCountryTimelineData() {
 function getSkillsTimelineData() {
   return [
     {
-      percentage: 19.6,
-      year: 2024,
-      logoColor: '#41B883',
-      logoShortPath: '/vuejs.png',
-      text: 'Vue.js',
-    },
-    {
-      percentage: 9.5,
-      logoColor: '#387ca0',
-      logoShortPath: '/reactjs.png',
-      text: 'React',
-    },
-    {
-      percentage: 28.5,
-      logoColor: '#C42AF1',
-      logoShortPath: '/angular.png',
-      text: 'Angular',
-    },
-
-    {
       percentage: 12.8,
       logoColor: '#2A73B4',
       logoShortPath: '/jquery.png',
+      year: 2010,
+      first: true,
       text: 'jQuery',
     },
 
@@ -437,6 +422,28 @@ function getSkillsTimelineData() {
       percentage: 12.8,
       logoColor: '#2A73B4',
       logoShortPath: '/jquery.png',
+      text: 'jQuery',
+    },
+
+    {
+      percentage: 28.5,
+      logoColor: '#C42AF1',
+      logoShortPath: '/angular.png',
+      text: 'Angular',
+    },
+
+    {
+      percentage: 9.5,
+      logoColor: '#387ca0',
+      logoShortPath: '/reactjs.png',
+      text: 'React',
+    },
+
+    {
+      percentage: 19.6,
+      logoColor: '#41B883',
+      logoShortPath: '/vuejs.png',
+      text: 'Vue.js',
     },
   ]
 }
@@ -444,29 +451,35 @@ function getSkillsTimelineData() {
 function getPositionsTimelineData() {
   return [
     {
-      text: 'Full-stack',
-      logoShortPath: '/fullstack.png',
-      percentage: 19.6 + 2.8,
-      logoColor: '#18356e',
-      year: 2024,
-      className: 'fullstack',
+      percentage: 12.8,
+      logoColor: '#DD2327',
+      logoShortPath: '/html.png',
+      year: 2010,
+      first: true,
+      text: 'Front-end',
     },
+
+    {
+      percentage: 16.8,
+      logoColor: '#18356e',
+      logoShortPath: '/fullstack.png',
+      className: 'fullstack',
+      text: 'Full-stack',
+    },
+
     {
       text: 'Front-end',
       percentage: 12.8 + 6.7 + 16.8 + 2.2 + 9.5,
       logoColor: '#DD2327',
       logoShortPath: '/html.png',
     },
+
     {
-      percentage: 16.8,
-      logoColor: '#18356e',
+      text: 'Full-stack',
       logoShortPath: '/fullstack.png',
+      percentage: 19.6 + 2.8,
+      logoColor: '#18356e',
       className: 'fullstack',
-    },
-    {
-      percentage: 12.8,
-      logoColor: '#DD2327',
-      logoShortPath: '/html.png',
     },
   ]
 }

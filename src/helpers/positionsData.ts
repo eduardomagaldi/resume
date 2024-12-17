@@ -24,9 +24,7 @@ export default [
           'Notable results:',
           [
             'Rehired by former employer.',
-            // 'Founded an IT team',
-            'Significant reduction of operational team workload.',
-            // 'Crutial support to multiple departments, specially sales',
+            'Significant reduction of operational team workload and boost in sales',
           ],
         ],
 
