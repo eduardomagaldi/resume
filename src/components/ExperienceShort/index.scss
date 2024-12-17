@@ -31,10 +31,6 @@
   display: flex;
   margin-top: 5px;
 
-  // &.wrapper-exp-first {
-  //   margin-top: 0;
-  // }
-
   &.wrapper-exp-first {
     .bar-exp {
       border-radius: 10px 10px 0 0;
@@ -156,10 +152,10 @@
   }
 }
 
-// .stack-title {
-//   text-wrap: nowrap;
-//   margin-right: 10px;
-// }
+.stack-title {
+  text-wrap: nowrap;
+  margin-right: 10px;
+}
 
 .b2ml {
   .results {
@@ -177,6 +173,7 @@
 
 .wrapper-stack {
   display: flex;
+  margin-right: 10px;
 }
 
 .list-content.list-stack {
@@ -210,10 +207,11 @@
   margin: 20px 0;
 }
 
-.wrapper-experience.btg {
-  // height: 360px;
+.wrapper-experience.tilda {
+  height: 315px;
+  margin-top: 5px;
 }
 
-// .wrapper-experience.fbiz {
-//   height: 664px;
-// }
+.wrapper-experience.mira {
+  height: 282px;
+}

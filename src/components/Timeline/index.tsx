@@ -23,6 +23,7 @@ export default ({ data }: { data: any }) => {
               className="bar"
               style={{
                 backgroundColor: item.logoColor,
+                borderColor: item.logoColor,
               }}
             ></div>
 

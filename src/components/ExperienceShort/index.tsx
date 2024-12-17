@@ -96,10 +96,11 @@ export default ({ companies }: { companies: any }) => {
 
                   <div className="wrapper-details">
                     <div className="description">
-                      <List list={position.description} />
+                      <List
+                        list={position.descriptionShort}
+                        stack={position.stack || null}
+                      />
                     </div>
-
-                    <Stack stack={position.stack || null} />
                   </div>
                 </div>
               ))}
@@ -115,7 +116,15 @@ function getCompanyData(name: string) {
   return companiesMap.get(name)
 }
 
-function List({ list, child }: { list: any; child?: boolean }) {
+function List({
+  list,
+  child,
+  stack,
+}: {
+  list: any
+  child?: boolean
+  stack?: any
+}) {
   if (!list || !list.length) return null
 
   return (
@@ -125,6 +134,20 @@ function List({ list, child }: { list: any; child?: boolean }) {
           <Output item={item} />
         </li>
       ))}
+
+      {stack && (
+        <li>
+          <div className="d-flex">
+            <div className="stack-title">Tech stack:</div>
+            {stack.map((item: any, index: number) => (
+              <div className="wrapper-stack" key={'stack-' + index}>
+                &#8203;
+                <IconText iconPath={item.img} text={item.name} />
+              </div>
+            ))}
+          </div>
+        </li>
+      )}
     </ul>
   )
 }

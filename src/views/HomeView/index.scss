@@ -317,10 +317,16 @@
 .skill-wrapper {
   display: flex;
   margin-bottom: 10px;
+  flex-direction: column;
 
   .icon-text {
     margin-right: 10px;
   }
+}
+
+.skill-main {
+  display: flex;
+  flex-direction: row;
 }
 
 .skill-wrapper:last-child {
@@ -372,7 +378,8 @@
 }
 
 .classification {
-  margin-right: 10px;
+  margin-bottom: 5px;
+  width: 100%;
 }
 
 .icon-backbone {
@@ -443,7 +450,7 @@ a {
 }
 
 .section-keywords {
-  line-height: 25px;
+  line-height: 19px;
 }
 
 .short {

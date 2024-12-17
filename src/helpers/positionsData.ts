@@ -10,7 +10,7 @@ export default [
         start: '2022-02-01',
         end: '2024-12-01',
 
-        description: [
+        descriptionShort: [
           'Custom-designed system for managing tax-related lawsuits.',
           ['Using court API data to automate PDF status reports.'],
           'Team leadership: recruitment of two programmers.',
@@ -24,7 +24,7 @@ export default [
           'Notable results:',
           [
             'Rehired by former employer.',
-            'Significant reduction of operational team workload and boost in sales',
+            'Significant reduction of operational team workload and boost in sales.',
           ],
         ],
 
@@ -59,6 +59,9 @@ export default [
             'Company was closed in Jan 2022.',
           ],
         ],
+        descriptionShort: [
+          'Mild mental health treatment app for women aged 45 and older.',
+        ],
         stack: [
           { name: 'React', img: '/reactjs.png' },
           { name: 'Node.js', img: '/nodejs.png' },
@@ -85,6 +88,7 @@ export default [
             'Followed strict requirements of Google Lighthouse for SEO optimization and usability.',
           ],
         ],
+        descriptionShort: ['Web app to assist with income tax declarations.'],
         stack: [{ name: 'React', img: '/reactjs.png' }],
       },
     ],
@@ -109,6 +113,7 @@ export default [
             'Full set of end-to-end testing development, covering most important features.',
           ],
         ],
+        descriptionShort: ['Recruiting platform for lawyers in Germany.'],
         stack: [
           { name: 'Angular', img: '/angular.png' },
           { name: 'Protractor', img: '/protractor.png' },
@@ -136,6 +141,9 @@ export default [
             'Projects carried out as a freelancer for former coworkers after relocating abroad.',
           ],
         ],
+        descriptionShort: [
+          'User interface design and development for algorithmic trading platform.',
+        ],
         stack: [{ name: 'Angular', img: '/angular.png' }],
       },
     ],
@@ -149,7 +157,7 @@ export default [
         start: '2016-06-01',
         end: '2017-10-01',
         description: [
-          'User interface initial development of education platform CMS.',
+          'User interface initial development for education platform CMS.',
           [
             'Enabled teachers to plan lessons in PDF format.',
             'Lessons downloaded automatically to tablets kept inside public schools.',
@@ -158,6 +166,9 @@ export default [
           [
             'Successful trial implementation of strategies to improve public education.',
           ],
+        ],
+        descriptionShort: [
+          'User interface initial development for public schools education platform CMS.',
         ],
         stack: [{ name: 'Angular', img: '/angular.png' }],
       },
@@ -184,6 +195,9 @@ export default [
             "Successful development and maintenance of websites in multiple languages of products such as Sunsilk, Hellmann's, Cif, Vim, Surf, Lipton.",
           ],
         ],
+        descriptionShort: [
+          "Team coordination for development and maintenance of Unilever's international product websites on Tridion CMS.",
+        ],
       },
 
       {
@@ -200,6 +214,9 @@ export default [
           [
             'Delivered work for companies like Netshoes, Zattini, Unilever, Subaru, Toddynho, Multiplus, Claro and NET.',
           ],
+        ],
+        descriptionShort: [
+          'Front-end development and maintenance for large brands like Netshoes, Zattini, Unilever, Subaru, Toddynho, Multiplus, Claro and NET.',
         ],
         stack: [{ name: 'jQuery', img: '/jquery.png' }],
       },
@@ -224,6 +241,9 @@ export default [
             'Significantly reduced errors in filled-out documentation for fund investments.',
             'Maintained a symbolic stock option in recognition of the work.',
           ],
+        ],
+        descriptionShort: [
+          'Development of web solution for analyzing and comparing investment funds data.',
         ],
         stack: [
           { name: 'Backbone.js', img: '/backbonejs.png' },
@@ -251,6 +271,9 @@ export default [
           ],
           'Notable results:',
           ['My design:', { src: '/print-mk.jpg' }],
+        ],
+        descriptionShort: [
+          'Design and front-end development for proprietary CMS websites.',
         ],
         stack: [{ name: 'jQuery', img: '/jquery.png' }],
       },

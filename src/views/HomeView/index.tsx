@@ -6,8 +6,12 @@ import positionsData from '../../helpers/positionsData'
 import './index.scss'
 
 import companiesMap from '../../helpers/companiesData'
+import encrypt, { decrypt } from '../../helpers/encrypt'
 import IconText from '../../components/IconText'
 import IconTextTitle from '../../components/IconTextTitle'
+import { useSearchParams } from 'react-router'
+import { useEffect, useState } from 'react'
+import ExperienceShort from '../../components/ExperienceShort'
 
 const timelineData: any[] = []
 
@@ -19,12 +23,48 @@ const countryTimelineData = getCountryTimelineData()
 const skillsTimelineData = getSkillsTimelineData()
 const positionsTimelineData = getPositionsTimelineData()
 
-const page2Data = [positionsData[0], positionsData[1]]
-const page3Data = [positionsData[2], positionsData[3], positionsData[4]]
-const page4Data = [positionsData[5], positionsData[6]]
-const page5Data = [positionsData[7], positionsData[8]]
+const page2Data = [positionsData[0]]
+const page2DataShort = [positionsData[1]]
+const page3Data = [
+  positionsData[2],
+  positionsData[3],
+  positionsData[4],
+  positionsData[5],
+]
+const page4Data = [positionsData[6], positionsData[7], positionsData[8]]
+
+const phoneNumberFormattedEncrypted =
+  'iU03IjBxqpZAr8JeOMcFMyRe/8vLphWImHPnGebnWF2kQJom151ZNTBIkQBB3hPCtbY7oAroaDQP9MNlEg=='
+const emailPrefixEncrypted =
+  'KmkqrAiZs1PzDmVMU2cOoWcCITUblHdDWhwZGl+Y2wASC2x9He3S0EMQeN9mFdg9DTQ4+IRSSQ=='
 
 export default function App() {
+  const [searchParams] = useSearchParams()
+  const [formattedPhoneNumber, setFormattedPhoneNumber] = useState('')
+  const [emailPrefix, setEmailPrefix] = useState('')
+
+  useEffect(() => {
+    ;(async function enc() {
+      const decryptedPhone = await decrypt(
+        phoneNumberFormattedEncrypted,
+        privateKey,
+      )
+      if (decryptedPhone !== 'decryption failed!') {
+        setFormattedPhoneNumber(decryptedPhone)
+      }
+
+      const decryptedEmailPrefix = await decrypt(
+        emailPrefixEncrypted,
+        privateKey,
+      )
+      if (decryptedEmailPrefix !== 'decryption failed!') {
+        setEmailPrefix(decryptedEmailPrefix)
+      }
+    })()
+  }, [])
+
+  const privateKey: any = searchParams.get('key')
+
   return (
     <>
       <div className="size-a4 page-first">
@@ -61,51 +101,57 @@ export default function App() {
                 <div className="section-inner">
                   <IconTextTitle iconPath="skills.png" text="MAIN SKILLS" />
 
-                  <div className="skill-wrapper">
+                  <div className="skill-wrapper skill-main">
                     <IconText iconPath="/html.png" text="HTML" />
                     <IconText iconPath="/css.png" text="CSS" />
                     <IconText iconPath="/javascript.png" text="JavaScript" />
                   </div>
 
                   <div className="skill-wrapper">
-                    <strong className="classification">Front-end:</strong>
-
-                    <IconText iconPath="/vuejs.png" text="Vue.js" />
-                    <IconText iconPath="/reactjs.png" text="React" />
-                    <IconText iconPath="/angular.png" text="Angular" />
-                    <IconText iconPath="/bootstrap.png" text="Bootstrap" />
+                    <strong className="classification">Front-end</strong>
+                    <div className="d-flex">
+                      <IconText iconPath="/vuejs.png" text="Vue.js" />
+                      <IconText iconPath="/reactjs.png" text="React" />
+                      <IconText iconPath="/angular.png" text="Angular" />
+                      <IconText iconPath="/bootstrap.png" text="Bootstrap" />
+                    </div>
                   </div>
 
                   {/* <hr /> */}
 
                   <div className="skill-wrapper">
-                    <strong className="classification">Testing:</strong>
-
-                    <IconText
-                      iconPath="/protractor.png"
-                      text="Protractor (End-to-end)"
-                    />
+                    <strong className="classification">Testing</strong>
+                    <div className="d-flex">
+                      <IconText
+                        iconPath="/protractor.png"
+                        text="Protractor (End-to-end)"
+                      />
+                    </div>
                   </div>
 
                   <div className="skill-wrapper">
-                    <strong className="classification">Back-end:</strong>
-
-                    <IconText iconPath="/nodejs.png" text="Node.js (Express)" />
-                    <IconText iconPath="/graphql.png" text="GraphQL" />
-                    <IconText iconPath="/postgresql.png" text="PostgreSQL" />
-                    <IconText iconPath="/redis.png" text="Redis" />
+                    <strong className="classification">Back-end</strong>
+                    <div className="d-flex">
+                      <IconText
+                        iconPath="/nodejs.png"
+                        text="Node.js (Express)"
+                      />
+                      <IconText iconPath="/graphql.png" text="GraphQL" />
+                      <IconText iconPath="/postgresql.png" text="PostgreSQL" />
+                      <IconText iconPath="/redis.png" text="Redis" />
+                    </div>
                   </div>
 
                   <div className="skill-wrapper">
-                    <strong className="classification">Infrastructure:</strong>
-
-                    <IconText iconPath="/aws.png" text="AWS" />
+                    <strong className="classification">Infrastructure</strong>
+                    <div>
+                      <IconText iconPath="/aws.png" text="AWS" />
+                    </div>
                   </div>
 
                   <div className="skill-wrapper">
-                    <strong className="classification">Other:</strong>
+                    <strong className="classification">Other</strong>
 
-                    {/* <IconText iconPath="/git.png" text="GIT" /> */}
                     <div className="icon-text">
                       GIT, Responsive pages, AJAX, RESTful APIs
                     </div>
@@ -170,7 +216,10 @@ export default function App() {
 
               <div className="section-top section-contact">
                 <div className="section-inner">
-                  <Contact />
+                  <Contact
+                    formattedPhoneNumber={formattedPhoneNumber}
+                    emailPrefix={emailPrefix}
+                  />
                 </div>
               </div>
             </div>
@@ -196,11 +245,7 @@ export default function App() {
                     <div className="education-content">
                       <div>Bachelor's degree in</div>
                       <strong>Computer Engineering</strong>
-                      <div className="d-flex">
-                        {/* <IconText iconPath="/calendar.png" text="2008 - " /> */}
-                        2008 - 2012
-                        {/* <IconText iconPath="/calendar.png" text="2012" /> */}
-                      </div>
+                      <div className="d-flex">2008 - 2012</div>
                     </div>
 
                     <div className="education-content">
@@ -232,9 +277,10 @@ export default function App() {
             <div className="section-inner w-100">
               <IconTextTitle iconPath="work2.png" text="EXPERIENCE" />
 
-              <Experience companies={page2Data} />
+              <ExperienceShort companies={page2Data} />
+              <ExperienceShort companies={page2DataShort} />
 
-              <div className="pagination">Page 2 / 5</div>
+              <div className="pagination">Page 2 / 4</div>
             </div>
           </div>
         </div>
@@ -250,9 +296,11 @@ export default function App() {
 
           <div className="section-wrapper">
             <div className="section-inner w-100">
-              <Experience companies={page3Data} />
+              {/* <Experience companies={page3Data} /> */}
 
-              <div className="pagination">Page 3 / 5</div>
+              <ExperienceShort companies={page3Data} />
+
+              <div className="pagination">Page 3 / 4</div>
             </div>
           </div>
         </div>
@@ -268,15 +316,15 @@ export default function App() {
 
           <div className="section-wrapper">
             <div className="section-inner w-100">
-              <Experience companies={page4Data} />
+              <ExperienceShort companies={page4Data} />
 
-              <div className="pagination">Page 4 / 5</div>
+              <div className="pagination">Page 4 / 4</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="size-a4 page-detail">
+      {/* <div className="size-a4 page-detail">
         <div className="wrapper-inner-page">
           <div className="section">
             <div className="section-inner">
@@ -288,11 +336,11 @@ export default function App() {
             <div className="section-inner w-100">
               <Experience companies={page5Data} />
 
-              <div className="pagination">Page 5 / 5</div>
+              <div className="pagination">Page 5 / 4</div>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
@@ -373,11 +421,11 @@ function getCountryTimelineData() {
       percentage: 54.1,
       first: true,
       year: 2010,
-      logoColor: '#2a742a',
+      logoColor: '#009548',
       logoShortPath: '/brazil-flag.svg',
       logoOnly: true,
       className: 'brazil-flag-only',
-      text: 'Brazil - 11 years',
+      text: 'Brazil - 8 years',
     },
 
     {
@@ -391,9 +439,9 @@ function getCountryTimelineData() {
     {
       percentage: 19.6,
       year: 2024,
-      logoColor: '#2a742a',
+      logoColor: '#009548',
       logoShortPath: '/brazil-flag.svg',
-
+      text: 'Brazil - 3 years',
       className: 'brazil',
     },
   ]
@@ -527,7 +575,13 @@ function Profile() {
   )
 }
 
-function Contact() {
+function Contact({
+  formattedPhoneNumber,
+  emailPrefix,
+}: {
+  formattedPhoneNumber: any
+  emailPrefix: any
+}) {
   return (
     <>
       {/* <div className="title-styled-wrapper">
@@ -543,21 +597,23 @@ function Contact() {
         <img className="icon-email" src="/email.png" />
         <a
           className="email"
-          href="mailto:magaldi1989@gmail.com"
+          href={emailPrefix ? `mailto:${emailPrefix}@gmail.com` : ''}
           target="_blank"
         >
-          magaldi1989<small>@gmail.com</small>
+          {emailPrefix || '#########'}
+          <small>@gmail.com</small>
         </a>
       </div>
 
       <div className="email-wrapper phone-wrapper">
         <img className="icon-whatsapp" src="/whatsapp.png" />
+
         <a
           className="email"
-          href="https://wa.me/+5511912725949"
+          href={'https://wa.me/' + formattedPhoneNumber.replace(/ /g, '')}
           target="_blank"
         >
-          +55 11 91272 5949
+          {formattedPhoneNumber ? formattedPhoneNumber : '+## ## ##### ####'}
         </a>
       </div>
 
@@ -599,7 +655,7 @@ function Contact() {
         <span>Juiz de Fora, Brazil</span>
       </div>
 
-      <div className="email-wrapper phone-wrapper pagination">Page 1 / 5</div>
+      <div className="email-wrapper phone-wrapper pagination">Page 1 / 4</div>
     </>
   )
 }

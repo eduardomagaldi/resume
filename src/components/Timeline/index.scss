@@ -5,7 +5,7 @@
 
 .timeline-item {
   box-sizing: border-box;
-  padding-right: 5px;
+  padding-right: 3px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -20,6 +20,7 @@
   width: 100%;
   margin-right: 3px;
   border: 1px solid;
+  box-sizing: border-box;
 }
 
 .timeline-item:first-child .bar {
@@ -161,7 +162,7 @@
   }
 
   .timeline-item:nth-child(even) .tooltip {
-    margin-top: -64px;
+    margin-top: -62px;
   }
 
   .timeline-item:nth-child(odd) .tooltip {
@@ -182,3 +183,60 @@
 //     width: 30px;
 //   }
 // }
+
+.timeline-country,
+.timeline-skills,
+.timeline-positions {
+  // background-color: yellow;
+
+  .timeline-item:first-child .bar {
+    border-radius: 0;
+  }
+
+  .timeline-item:last-child .bar {
+    border-radius: 0;
+  }
+
+  .bar {
+    background-color: transparent !important;
+    border-top: none;
+    border-radius: 0 0 5px 5px !important;
+    border-width: 3px;
+  }
+}
+
+.timeline-country,
+.timeline-skills,
+.timeline-positions {
+  .tooltip {
+    margin-top: auto !important;
+    border: none;
+    background-color: transparent;
+    padding: 0 !important;
+    width: 100%;
+    border-radius: 0 !important;
+  }
+
+  .icon-text {
+    flex-direction: column;
+    // background-color: yellow;
+    width: 100%;
+    height: 45px;
+  }
+
+  .year {
+    display: none;
+  }
+
+  .timeline {
+    margin-top: 30px;
+  }
+
+  .icon {
+    margin: 5px 0 0 0;
+  }
+
+  .bar {
+    height: 10px;
+  }
+}
