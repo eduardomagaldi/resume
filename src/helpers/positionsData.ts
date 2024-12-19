@@ -46,22 +46,10 @@ export default [
         title: 'Senior full-stack developer',
         start: '2021-09-01',
         end: '2022-01-01',
-        description: [
-          'Mental health treatment app for women aged 45 and older.',
-          [
-            'Addressing only mild mental health issues.',
-            'Educational content.',
-            'Weekly online group therapy sessions.',
-          ],
-          'Notable results:',
-          [
-            'Successfully persuaded CEO to adopt an Apple computer.',
-            'Company was closed in Jan 2022.',
-          ],
-        ],
         descriptionShort: [
           'Mild mental health treatment app for women aged 45 and older.',
         ],
+        moreInfo: 'https://www.linkedin.com/in/eduardomagaldi',
         stack: [
           { name: 'React', img: '/reactjs.png' },
           { name: 'Node.js', img: '/nodejs.png' },
@@ -80,15 +68,8 @@ export default [
         title: 'Senior front-end developer',
         start: '2020-09-01',
         end: '2021-08-01',
-        description: [
-          'Web app that simplifies income tax declarations in Germany.',
-          ['Filing the final tax return digitally with the tax office.'],
-          'Notable results:',
-          [
-            'Followed strict requirements of Google Lighthouse for SEO optimization and usability.',
-          ],
-        ],
         descriptionShort: ['Web app to assist with income tax declarations.'],
+        moreInfo: 'https://www.linkedin.com/in/eduardomagaldi',
         stack: [{ name: 'React', img: '/reactjs.png' }],
       },
     ],
@@ -101,19 +82,8 @@ export default [
         title: 'Senior front-end developer',
         start: '2018-03-01',
         end: '2020-08-01',
-        description: [
-          'Recruiting platform for lawyers in Germany.',
-          [
-            'Companies post job openings and create profile pages.',
-            'Goal: connect with and hire legal professionals.',
-          ],
-          'Volunteer work teaching HTML/CSS/JS to refugees.',
-          'Notable results:',
-          [
-            'Full set of end-to-end testing development, covering most important features.',
-          ],
-        ],
         descriptionShort: ['Lawyer recruiting platform.'],
+        moreInfo: 'https://www.linkedin.com/in/eduardomagaldi',
         stack: [
           { name: 'Angular', img: '/angular.png' },
           { name: 'Protractor', img: '/protractor.png' },
@@ -129,21 +99,10 @@ export default [
         title: 'Senior front-end developer',
         start: '2017-11-01',
         end: '2018-02-01',
-        description: [
-          'User interface design and development for algorithmic trading platform.',
-          [
-            'Implementation of a live Python coding interface for investment strategies.',
-            'Included performance graphs providing practical insights.',
-            'Winners of the contests receive substantial cash prizes.',
-          ],
-          'Notable results:',
-          [
-            'Projects carried out as a freelancer for former coworkers after relocating abroad.',
-          ],
-        ],
         descriptionShort: [
           'User interface design and development for algorithmic trading platform.',
         ],
+        moreInfo: 'https://www.linkedin.com/in/eduardomagaldi',
         stack: [{ name: 'Angular', img: '/angular.png' }],
       },
     ],
@@ -156,20 +115,10 @@ export default [
         title: 'Senior front-end developer',
         start: '2016-06-01',
         end: '2017-10-01',
-        description: [
-          'User interface initial development for education platform CMS.',
-          [
-            'Enabled teachers to plan lessons in PDF format.',
-            'Lessons downloaded automatically to tablets kept inside public schools.',
-          ],
-          'Notable results:',
-          [
-            'Successful trial implementation of strategies to improve public education.',
-          ],
-        ],
         descriptionShort: [
           'User interface initial development for public schools education platform CMS.',
         ],
+        moreInfo: 'https://www.linkedin.com/in/eduardomagaldi',
         stack: [{ name: 'Angular', img: '/angular.png' }],
       },
     ],
@@ -182,42 +131,20 @@ export default [
         title: 'Technology coordinator',
         start: '2015-08-01',
         end: '2016-05-01',
-        description: [
-          "Team coordination for the development and maintenance of software within Unilever's CMS department.",
-          [
-            'Evaluation of design application viability.',
-            'Assistance with CMS use.',
-            "Management of development of local product websites of Unilever's multiple brands and countries.",
-            'Point of contact between foreigner back-end partner, local advertising agencies and third-party developers.',
-          ],
-          'Notable results:',
-          [
-            "Successful development and maintenance of websites in multiple languages of products such as Sunsilk, Hellmann's, Cif, Vim, Surf, Lipton.",
-          ],
-        ],
         descriptionShort: [
           "Team coordination for development and maintenance of Unilever's international product websites on Tridion CMS.",
         ],
+        moreInfo: 'https://www.linkedin.com/in/eduardomagaldi',
       },
 
       {
         title: 'Front-end developer',
         start: '2014-07-01',
         end: '2015-07-01',
-        description: [
-          'Front-end development and maintenance of inumerous websites and landing pages.',
-          [
-            'Development of components independenlty in a "storybook" like documentation platform.',
-          ],
-          'Development of ads for digital magazines.',
-          'Notable results:',
-          [
-            'Delivered work for companies like Netshoes, Zattini, Unilever, Subaru, Toddynho, Multiplus, Claro and NET.',
-          ],
-        ],
         descriptionShort: [
           'Front-end development and maintenance for large brands like Netshoes, Zattini, Unilever, Subaru, Toddynho, Multiplus, Claro and NET.',
         ],
+        moreInfo: 'https://www.linkedin.com/in/eduardomagaldi',
         stack: [{ name: 'jQuery', img: '/jquery.png' }],
       },
     ],
@@ -230,25 +157,15 @@ export default [
         title: 'Junior full-stack developer',
         start: '2012-01-01',
         end: '2014-06-01',
-        description: [
-          'Development of comparacaodefundos.com, web solution for analyzing and comparing investment funds data.',
-          [
-            'Development of a tool to simulate investment fund amounts.',
-            'Automation, simplification and validation of investment funds registration paperwork.',
-          ],
-          'Notable results:',
-          [
-            'Significantly reduced errors in filled-out documentation for fund investments.',
-            'Maintained a symbolic stock option in recognition of the work.',
-          ],
-        ],
         descriptionShort: [
           'Development of web solution for analyzing and comparing investment funds data.',
         ],
+        moreInfo: 'https://www.linkedin.com/in/eduardomagaldi',
         stack: [
           { name: 'Backbone.js', img: '/backbonejs.png' },
           { name: 'Node.js', img: '/nodejs.png' },
           { name: 'Redis', img: '/redis.png' },
+          { name: 'AWS', img: '/aws.png' },
         ],
       },
     ],
@@ -262,19 +179,10 @@ export default [
         title: 'Trainee web developer and designer',
         start: '2010-02-01',
         end: '2011-12-01',
-        description: [
-          'Design and front-end development of proprietary CMS websites.',
-          [
-            'Largest company within the incubator at the Federal University of Itajubá.',
-            'Pixel-perfect development.',
-            'Highly rigid design principles.',
-          ],
-          'Notable results:',
-          ['My design:', { src: '/print-mk.jpg' }],
-        ],
         descriptionShort: [
           'Design and front-end development for proprietary CMS websites.',
         ],
+        moreInfo: 'https://www.linkedin.com/in/eduardomagaldi',
         stack: [{ name: 'jQuery', img: '/jquery.png' }],
       },
     ],

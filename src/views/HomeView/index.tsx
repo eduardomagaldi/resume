@@ -583,20 +583,20 @@ function Contact({
 }) {
   return (
     <>
-      {/* <div className="title-styled-wrapper">
-        <h2 className="title-styled">
-          <img className="icon-profile" src="/phone.png" />
-          <div className="title-styled-text">CONTACT INFO</div>
-        </h2>
-      </div> */}
-
       <IconTextTitle iconPath="phone.png" text="CONTACT INFO" />
 
-      <div className="email-wrapper">
+      <div className="email-wrapper phone-wrapper">
+        <span>
+          <small>Name: </small>
+          <strong>Eduardo Magaldi</strong>
+        </span>
+      </div>
+
+      <div className="email-wrapper phone-wrapper">
         <img className="icon-email" src="/email.png" />
         <a
           className="email"
-          href={emailPrefix ? `mailto:${emailPrefix}@gmail.com` : ''}
+          href={emailPrefix ? `mailto:${emailPrefix}@gmail.com` : undefined}
           target="_blank"
         >
           {emailPrefix || '#########'}
@@ -609,7 +609,11 @@ function Contact({
 
         <a
           className="email"
-          href={'https://wa.me/' + formattedPhoneNumber.replace(/ /g, '')}
+          href={
+            formattedPhoneNumber
+              ? 'https://wa.me/' + formattedPhoneNumber.replace(/ /g, '')
+              : undefined
+          }
           target="_blank"
         >
           {formattedPhoneNumber ? formattedPhoneNumber : '+## ## ##### ####'}
@@ -659,34 +663,4 @@ function Contact({
   )
 }
 
-// {/* <div className="wrapper-flag">
-//             <img className="tooltip-flag" src="/germany-flag.svg" />
-//           </div> */}
-
-// {
-//   /* <div className="tooltip-11years">
-//               <div className="wrapper">
-//                 <div className="arrow"></div>
-//                 <div className="pill">
-//                   <div className="wrapper-flag">
-//                     <img className="tooltip-flag" src="/brazil-flag.svg" />
-//                   </div>
-
-//                   <div className="pill-text">11 YEARS</div>
-//                 </div>
-//               </div>
-//             </div> */
-// }
-
-// {
-//   /* <div className="tooltip-h">
-//               <div className="tooltip-h-before"></div>
-//               <div className="tooltip-h-wrapper">
-//                 <div className="wrapper-flag">
-//                   <img className="tooltip-flag" src="/brazil-flag.svg" />
-//                 </div>
-
-//                 <div className="tooltip-h-text">11 YEARS</div>
-//               </div>
-//             </div> */
-// }
+function getHref() {}

@@ -19,6 +19,7 @@ export default ({ companies }: { companies: any }) => {
             className="bar-exp"
             style={{
               backgroundColor: getCompanyData(item.company).logoColor,
+              borderColor: getCompanyData(item.company).logoColor,
             }}
           ></div>
 
@@ -98,6 +99,7 @@ export default ({ companies }: { companies: any }) => {
                     <div className="description">
                       <List
                         list={position.descriptionShort}
+                        moreInfo={position.moreInfo}
                         stack={position.stack || null}
                       />
                     </div>
@@ -120,10 +122,12 @@ function List({
   list,
   child,
   stack,
+  moreInfo,
 }: {
   list: any
   child?: boolean
   stack?: any
+  moreInfo?: any
 }) {
   if (!list || !list.length) return null
 
@@ -132,6 +136,16 @@ function List({
       {list.map((item: any, index: number) => (
         <li key={index} className={getClassName(item)}>
           <Output item={item} />
+          {moreInfo && (
+            <>
+              {' '}
+              <a target="_blank" href={moreInfo}>
+                <img className="icon-linkedin" src="/linkedin.png" />
+                More info
+              </a>
+              {'.'}
+            </>
+          )}
         </li>
       ))}
 

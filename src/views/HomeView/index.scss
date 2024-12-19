@@ -398,7 +398,7 @@
   }
 }
 
-a {
+a[href] {
   color: #2a742a;
   text-decoration: none;
   font-weight: bold;
@@ -426,6 +426,12 @@ a {
 .icon-whatsapp {
   width: 15px;
   margin-right: 3px;
+}
+
+.icon-linkedin {
+  width: 15px;
+  margin-right: 3px;
+  margin-bottom: -2px;
 }
 
 .phone-wrapper {
@@ -524,7 +530,6 @@ a {
 
 .page-first {
   .pagination {
-    height: 43px;
     display: flex;
     align-items: end;
     justify-content: end;
