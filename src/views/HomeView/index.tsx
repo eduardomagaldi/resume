@@ -230,63 +230,71 @@ export default function App() {
       <div className="size-a4 page-detail">
         <div className="wrapper-inner-page">
           <div className="section">
-            <div className="section-inner">
-              <HeaderShort />
-            </div>
-          </div>
+            {/* <div className="section-inner">bla</div> */}
 
-          <div className="section section-education">
             <div className="section-wrapper">
-              <div className="section-inner w-100">
-                <IconTextTitle iconPath="education2.png" text="EDUCATION" />
-
-                <div className="wrapper-education">
-                  <div className="wrapper-education-inner">
-                    <div className="education-content">
-                      <div>Bachelor's degree in</div>
-                      <strong>Computer Engineering</strong>
-                      <div className="d-flex">2008 - 2012</div>
-                    </div>
-
-                    <div className="education-content">
-                      <strong>INATEL</strong>
-                      <div>
-                        Instituto Nacional de <br />
-                        Telecomunicações
-                      </div>
-                    </div>
-                    <div className="education-content">
-                      <div>&nbsp;</div>
-                      <div className="d-flex">
-                        <img className="icon-whatsapp" src="/location.png" />
-                        <div>Minas Gerais,&nbsp;</div>
-                        <div>Brazil</div>
-                      </div>
-                    </div>
-                    <img
-                      className="logo-inatel education-content"
-                      src="/inatel.svg"
-                    />
-                  </div>
-                </div>
-              </div>
+              <h1>Eduardo Magaldi</h1>
+              <hr />
             </div>
           </div>
 
-          <div className="section-wrapper section-education">
-            <div className="section-inner w-100">
-              <IconTextTitle iconPath="work2.png" text="EXPERIENCE" />
+          {/* - Highly experienced Computer Engineer with over 15 years of solid hands-on expertise in production user-friendly web development in both Germany and Brazil.
+- Proficient in JavaScript (ES6+), HTML, CSS, JSON, AJAX, and HTTP.
+- Knowledge of the three major modern front-end frameworks: React, Vue, and Angular.
+- Familiarity with RESTful node.js back-ends, relational (PostgreSQL, SQL, GraphQL) and NoSQL (Redis) databases.
+- AWS infrastructure competences, with expertise in designing, deploying, and managing cloud solutions.
+- Committed with a deep understanding of visual design principles and user interface (UI) impact on user experiences (UX), thanks to a keen eye for detail and prior work as a designer and pixel-perfect developer.
+- Strong critical thinking and problem-solving skills, with the ability to drive successful project outcomes. */}
 
-              <ExperienceShort companies={page2Data} />
-              <ExperienceShort companies={page2DataShort} />
+          {/*           
+          
+- Independently developed and maintained an internal tax lawsuit management system entirely from scratch, choosing cutting-edge technologies (Vue.js, Node and GraphQL) and taking on all responsibilities and challenges with full ownership.
+- Team leadership: founded and led the IT team, hiring and supervising two Programmers.
+- Integrated court APIs data to automate repetitive tasks, boosting team productivity and eﬃciency optimizing the process of emailing updated lawsuit PDF status reports to B2B clients.
+- Created custom calculators to support sales initiatives estimating potential economy of tax lawsuits and enhancing sales proposal accuracy.
+- Brought support solving technical issues promptly, minimizing downtime for users and providing stable software.
+- Gathered and defined customer requirements to create successful systems meeting unique client needs.
+- Used Vuex (similar to Redux) as a singleton design pattern state management strategy.
+- Chose Express because of prior background with its chain of responsibility and middleware design patterns.
+- Began generating PDFs with PDFKit but switched to a headless Puppeteer Chromium browser Docker image solution, which enabled easier creation of dynamic, content-size adaptable tables using HTML and CSS within the PDF documents.
+- Quoted third-party automated unit, interface (e2e) and integration tests development services.
+- DevOps practices: used Github Actions for CI/CD (Continuous Integration and Continuous Delivery) pipelines.
+- Adopted Amazon Web Services EC2 Linux servers, AWS RDS for database with Hasura platform for GraphQL and AWS Lambda for scheduled routines, using its SDK for nodejs.
+- Tasks were managed in Agile Methodology via Kanban Trello board.
+- Applied DRY and KISS concepts to write clean, readable, reusable, and maintainable code.
+- Version control via GIT and Github.
+- Volunteer initiative teaching HTML5 and CSS3 to non-technical staff.
+          
+           */}
+          {/* 
 
-              <div className="pagination">Page 2 / 4</div>
-            </div>
-          </div>
+- Contributed to the development of a mental healthcare treatment app for women aged 45 and older, addressing only mild mental health issues, with educational content and weekly online group therapy sessions.
+- Utilized SEO best practices to increase website visibility in search engine results and accessibility, following strict requirements of Google Lighthouse, including color contrast.
+- Tech stack: ReactJS, React hooks, TypeScript, SASS (SCSS), Node.js, GraphQL, PostgreSQL, Terraform, AWS, Ruby on Rails, Hugo (Golang static site generator - SSG), and Gitlab.
+
+
+ */}
+
+          {/* 
+
+- Contributed to the frontend development of a recruitment platform for lawyers in Germany, working with B2B and B2C.
+- Used scrum methodology with Fibonacci sequence for story point estimation, contributing to sprint planning and reviews.
+- Implemented responsive design techniques to ensure websites performed well on desktop, tablet, and mobile browsers and devices.
+- Conducted website testing, identifying and fixing bugs for smoother operation and building end-to-end (interface) automated testing suite with Protractor (WebDriverJS / Selenium), covering key features to ensure software stability and mitigate the risk of unforeseen errors caused by new features.
+- Real-time connection with WebSockets.
+- Volunteer initiative teaching HTML, CSS, and JavaScript to refugees at ReDI School.
+- Tech stack: Angular, TypeScript, SASS, PHP, and hosted on DigitalOcean.
+
+ */}
+
+          {/* - Single designer and front-end programmer of algorithmic trading platform Stratsphera, with live Python coding interface for developing investment strategies competition opportunities.
+- Tech stack: AngularJS, Design System, CodeMirror, node-sass, webpack, and Java Spring Boot. */}
+
+          <div className="pagination">Page 2 / 4</div>
         </div>
       </div>
 
-      <div className="size-a4 page-detail">
+      {/* <div className="size-a4 page-detail">
         <div className="wrapper-inner-page">
           <div className="section">
             <div className="section-inner">
@@ -296,7 +304,7 @@ export default function App() {
 
           <div className="section-wrapper">
             <div className="section-inner w-100">
-              {/* <Experience companies={page3Data} /> */}
+              
 
               <ExperienceShort companies={page3Data} />
 
@@ -322,24 +330,6 @@ export default function App() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* <div className="size-a4 page-detail">
-        <div className="wrapper-inner-page">
-          <div className="section">
-            <div className="section-inner">
-              <HeaderShort />
-            </div>
-          </div>
-
-          <div className="section-wrapper">
-            <div className="section-inner w-100">
-              <Experience companies={page5Data} />
-
-              <div className="pagination">Page 5 / 4</div>
-            </div>
-          </div>
-        </div>
       </div> */}
     </>
   )
@@ -357,21 +347,9 @@ function Header() {
         <div className="last">MAGALDI</div>
       </h1>
 
-      {/* <h1 className="title education">
-        <div>SOFTWARE</div>
-
-        <div className="line-second">DEVELOPER</div>
-      </h1>
-
-      <h1 className="title skills">
-        <div className="line-1">HTML / CSS</div>
-        <div>JAVASCRIPT</div>
-      </h1> */}
-
       <img className="software" src="/softwaredeveloper.png" />
 
       <div className="map">
-        {/* <img className="map-img map-img-green" src="/world-green.svg" /> */}
         <img className="map-img" src="/world-stroke.svg" />
 
         <div className="bubble bubble-germany">
@@ -662,5 +640,3 @@ function Contact({
     </>
   )
 }
-
-function getHref() {}
