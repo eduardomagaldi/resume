@@ -6,7 +6,12 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  return <>Resume eduardo magaldi</>;
+  return (
+    <>
+      <div>Resume eduardo magaldi</div>
+      <strong>change 1</strong>
+    </>
+  );
 }
 
 export default App;
