@@ -11,6 +11,7 @@ function App() {
       <div>Resume eduardo magaldi</div>
       <strong>change 1</strong>
       <strong>change 2</strong>
+      <strong>change 3</strong>
     </>
   );
 }
