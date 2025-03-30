@@ -1,7 +1,7 @@
 import Timeline from '../../components/Timeline'
 import Ruler from '../../components/Ruler'
 // import Experience from '../../components/Experience'
-import positionsData from '../../helpers/positionsData'
+// import positionsData from '../../helpers/positionsData'
 
 import './index.scss'
 
@@ -10,8 +10,8 @@ import { decrypt } from '../../helpers/encrypt'
 import IconText from '../../components/IconText'
 import IconTextTitle from '../../components/IconTextTitle'
 import { useSearchParams } from 'react-router'
-import { useEffect, useState } from 'react'
-import ExperienceShort from '../../components/ExperienceShort'
+import { useEffect } from 'react'
+// import ExperienceShort from '../../components/ExperienceShort'
 
 const timelineData: any[] = []
 
@@ -23,15 +23,15 @@ const countryTimelineData = getCountryTimelineData()
 const skillsTimelineData = getSkillsTimelineData()
 const positionsTimelineData = getPositionsTimelineData()
 
-const page2Data = [positionsData[0]]
-const page2DataShort = [positionsData[1]]
-const page3Data = [
-  positionsData[2],
-  positionsData[3],
-  positionsData[4],
-  positionsData[5],
-]
-const page4Data = [positionsData[6], positionsData[7], positionsData[8]]
+// const page2Data = [positionsData[0]]
+// const page2DataShort = [positionsData[1]]
+// const page3Data = [
+//   positionsData[2],
+//   positionsData[3],
+//   positionsData[4],
+//   positionsData[5],
+// ]
+// const page4Data = [positionsData[6], positionsData[7], positionsData[8]]
 
 const phoneNumberFormattedEncrypted =
   'iU03IjBxqpZAr8JeOMcFMyRe/8vLphWImHPnGebnWF2kQJom151ZNTBIkQBB3hPCtbY7oAroaDQP9MNlEg=='
@@ -39,260 +39,11 @@ const emailPrefixEncrypted =
   'KmkqrAiZs1PzDmVMU2cOoWcCITUblHdDWhwZGl+Y2wASC2x9He3S0EMQeN9mFdg9DTQ4+IRSSQ=='
 
 export default function App() {
-  const [searchParams] = useSearchParams()
-  const [formattedPhoneNumber, setFormattedPhoneNumber] = useState('')
-  const [emailPrefix, setEmailPrefix] = useState('')
-
-  useEffect(() => {
-    ;(async function enc() {
-      const decryptedPhone = await decrypt(
-        phoneNumberFormattedEncrypted,
-        privateKey,
-      )
-      if (decryptedPhone !== 'decryption failed!') {
-        setFormattedPhoneNumber(decryptedPhone)
-      }
-
-      const decryptedEmailPrefix = await decrypt(
-        emailPrefixEncrypted,
-        privateKey,
-      )
-      if (decryptedEmailPrefix !== 'decryption failed!') {
-        setEmailPrefix(decryptedEmailPrefix)
-      }
-    })()
-  }, [])
-
-  const privateKey: any = searchParams.get('key')
-
   return (
     <>
-      <div className="size-a4 page-first">
-        <div className="wrapper-inner-page">
-          <div className="section">
-            <div className="section-inner">
-              <Header />
-            </div>
-          </div>
-
-          <div className="section-wrapper">
-            <div className="section-left">
-              <div className="section-inner">
-                <Ruler />
-
-                <div className="timeline-experience">
-                  <Timeline data={timelineData} />
-                </div>
-
-                <div className="timeline-country">
-                  <Timeline data={countryTimelineData} />
-                </div>
-
-                <div className="timeline-skills">
-                  <Timeline data={skillsTimelineData} />
-                </div>
-
-                <div className="timeline-positions">
-                  <Timeline data={positionsTimelineData} />
-                </div>
-              </div>
-
-              <div className="section-top section-skills">
-                <div className="section-inner">
-                  <IconTextTitle iconPath="skills.png" text="MAIN SKILLS" />
-
-                  <div className="skill-wrapper skill-main">
-                    <IconText iconPath="/html.png" text="HTML" />
-                    <IconText iconPath="/css.png" text="CSS" />
-                    <IconText iconPath="/javascript.png" text="JavaScript" />
-                  </div>
-
-                  <div className="skill-wrapper">
-                    <strong className="classification">Front-end</strong>
-                    <div className="d-flex">
-                      <IconText iconPath="/vuejs.png" text="Vue.js" />
-                      <IconText iconPath="/reactjs.png" text="React" />
-                      <IconText iconPath="/angular.png" text="Angular" />
-                      <IconText iconPath="/bootstrap.png" text="Bootstrap" />
-                    </div>
-                  </div>
-
-                  {/* <hr /> */}
-
-                  <div className="skill-wrapper">
-                    <strong className="classification">Testing</strong>
-                    <div className="d-flex">
-                      <IconText
-                        iconPath="/protractor.png"
-                        text="Protractor (End-to-end)"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="skill-wrapper">
-                    <strong className="classification">Back-end</strong>
-                    <div className="d-flex">
-                      <IconText
-                        iconPath="/nodejs.png"
-                        text="Node.js (Express)"
-                      />
-                      <IconText iconPath="/graphql.png" text="GraphQL" />
-                      <IconText iconPath="/postgresql.png" text="PostgreSQL" />
-                      <IconText iconPath="/redis.png" text="Redis" />
-                    </div>
-                  </div>
-
-                  <div className="skill-wrapper">
-                    <strong className="classification">Infrastructure</strong>
-                    <div>
-                      <IconText iconPath="/aws.png" text="AWS" />
-                    </div>
-                  </div>
-
-                  <div className="skill-wrapper">
-                    <strong className="classification">Other</strong>
-
-                    <div className="icon-text">
-                      GIT, Responsive pages, AJAX, RESTful APIs
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="section-top">
-                <div className="section-inner section-keywords">
-                  <strong>Keywords:</strong> #software #developer #programmer
-                  #engineer #desenvolvedor #programador #engenheiro #front-end
-                  #frontend #full-stack #fullstack #vue #vue.js #react #react.js
-                  #angular #angular.js #node.js #node
-                  {/* <div className="title-styled-wrapper title-main-skills">
-                    <h2 className="title-styled">
-                      <img className="icon-skills" src="/skills.png" />
-                      <div className="title-styled-text mt-10 title-other-skills">
-                        VOLUNTEERING
-                      </div>
-                    </h2>
-                  </div>
-
-                  <span>Teaching HTML/CSS/JavaScript to refugees</span> */}
-                </div>
-              </div>
-            </div>
-
-            <div className="section-right">
-              <div className="section-inner">
-                <div className="bachelor">
-                  <div className="bachelor-text">
-                    <div>Bachelor's</div>
-                    <div>degree in</div>
-                  </div>
-                </div>
-
-                <div className="course-wrapper">
-                  <IconTextTitle iconPath="education2.png" text="COMPUTER" />
-                  <h1 className="engineering">ENGINEERING</h1>
-                  <div className="at">at</div>
-                </div>
-
-                <img src="/inatel.svg" />
-              </div>
-
-              <div className="section-top section-made">
-                <div className="section-inner">
-                  <div className="made">
-                    <div>CV made with</div>
-                    <img src="/reactjs.png" className="icon-small" />
-
-                    <div>React</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="section-top section-profile">
-                <div className="section-inner">
-                  <Profile />
-                </div>
-              </div>
-
-              <div className="section-top section-contact">
-                <div className="section-inner">
-                  <Contact
-                    formattedPhoneNumber={formattedPhoneNumber}
-                    emailPrefix={emailPrefix}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="size-a4 page-detail">
-        <div className="wrapper-inner-page">
-          <div className="section">
-            {/* <div className="section-inner">bla</div> */}
-
-            <div className="section-wrapper">
-              <h1>Eduardo Magaldi</h1>
-              <hr />
-            </div>
-          </div>
-
-          {/* - Highly experienced Computer Engineer with over 15 years of solid hands-on expertise in production user-friendly web development in both Germany and Brazil.
-- Proficient in JavaScript (ES6+), HTML, CSS, JSON, AJAX, and HTTP.
-- Knowledge of the three major modern front-end frameworks: React, Vue, and Angular.
-- Familiarity with RESTful node.js back-ends, relational (PostgreSQL, SQL, GraphQL) and NoSQL (Redis) databases.
-- AWS infrastructure competences, with expertise in designing, deploying, and managing cloud solutions.
-- Committed with a deep understanding of visual design principles and user interface (UI) impact on user experiences (UX), thanks to a keen eye for detail and prior work as a designer and pixel-perfect developer.
-- Strong critical thinking and problem-solving skills, with the ability to drive successful project outcomes. */}
-
-          {/*           
-          
-- Independently developed and maintained an internal tax lawsuit management system entirely from scratch, choosing cutting-edge technologies (Vue.js, Node and GraphQL) and taking on all responsibilities and challenges with full ownership.
-- Team leadership: founded and led the IT team, hiring and supervising two Programmers.
-- Integrated court APIs data to automate repetitive tasks, boosting team productivity and eﬃciency optimizing the process of emailing updated lawsuit PDF status reports to B2B clients.
-- Created custom calculators to support sales initiatives estimating potential economy of tax lawsuits and enhancing sales proposal accuracy.
-- Brought support solving technical issues promptly, minimizing downtime for users and providing stable software.
-- Gathered and defined customer requirements to create successful systems meeting unique client needs.
-- Used Vuex (similar to Redux) as a singleton design pattern state management strategy.
-- Chose Express because of prior background with its chain of responsibility and middleware design patterns.
-- Began generating PDFs with PDFKit but switched to a headless Puppeteer Chromium browser Docker image solution, which enabled easier creation of dynamic, content-size adaptable tables using HTML and CSS within the PDF documents.
-- Quoted third-party automated unit, interface (e2e) and integration tests development services.
-- DevOps practices: used Github Actions for CI/CD (Continuous Integration and Continuous Delivery) pipelines.
-- Adopted Amazon Web Services EC2 Linux servers, AWS RDS for database with Hasura platform for GraphQL and AWS Lambda for scheduled routines, using its SDK for nodejs.
-- Tasks were managed in Agile Methodology via Kanban Trello board.
-- Applied DRY and KISS concepts to write clean, readable, reusable, and maintainable code.
-- Version control via GIT and Github.
-- Volunteer initiative teaching HTML5 and CSS3 to non-technical staff.
-          
-           */}
-          {/* 
-
-- Contributed to the development of a mental healthcare treatment app for women aged 45 and older, addressing only mild mental health issues, with educational content and weekly online group therapy sessions.
-- Utilized SEO best practices to increase website visibility in search engine results and accessibility, following strict requirements of Google Lighthouse, including color contrast.
-- Tech stack: ReactJS, React hooks, TypeScript, SASS (SCSS), Node.js, GraphQL, PostgreSQL, Terraform, AWS, Ruby on Rails, Hugo (Golang static site generator - SSG), and Gitlab.
-
-
- */}
-
-          {/* 
-
-- Contributed to the frontend development of a recruitment platform for lawyers in Germany, working with B2B and B2C.
-- Used scrum methodology with Fibonacci sequence for story point estimation, contributing to sprint planning and reviews.
-- Implemented responsive design techniques to ensure websites performed well on desktop, tablet, and mobile browsers and devices.
-- Conducted website testing, identifying and fixing bugs for smoother operation and building end-to-end (interface) automated testing suite with Protractor (WebDriverJS / Selenium), covering key features to ensure software stability and mitigate the risk of unforeseen errors caused by new features.
-- Real-time connection with WebSockets.
-- Volunteer initiative teaching HTML, CSS, and JavaScript to refugees at ReDI School.
-- Tech stack: Angular, TypeScript, SASS, PHP, and hosted on DigitalOcean.
-
- */}
-
-          {/* - Single designer and front-end programmer of algorithmic trading platform Stratsphera, with live Python coding interface for developing investment strategies competition opportunities.
-- Tech stack: AngularJS, Design System, CodeMirror, node-sass, webpack, and Java Spring Boot. */}
-
-          <div className="pagination">Page 2 / 4</div>
-        </div>
-      </div>
+      {<FirstPage />}
+      {/* {<SecondPage />}
+      {<ThirdPage />} */}
 
       {/* <div className="size-a4 page-detail">
         <div className="wrapper-inner-page">
@@ -335,6 +86,496 @@ export default function App() {
   )
 }
 
+function FirstPage() {
+  // const [setFormattedPhoneNumber] = useState('')
+  // const [setEmailPrefix] = useState('')
+
+  const [searchParams] = useSearchParams()
+
+  useEffect(() => {
+    ;(async function enc() {
+      const decryptedPhone = await decrypt(
+        phoneNumberFormattedEncrypted,
+        privateKey,
+      )
+      if (decryptedPhone !== 'decryption failed!') {
+        // setFormattedPhoneNumber(decryptedPhone)
+      }
+
+      const decryptedEmailPrefix = await decrypt(
+        emailPrefixEncrypted,
+        privateKey,
+      )
+      if (decryptedEmailPrefix !== 'decryption failed!') {
+        // setEmailPrefix(decryptedEmailPrefix)
+      }
+    })()
+  }, [])
+
+  const privateKey: any = searchParams.get('key')
+
+  return (
+    <div className="size-a4 page-first">
+      <div className="wrapper-inner-page">
+        <div className="section">
+          <div className="section-inner">
+            <Header />
+          </div>
+        </div>
+
+        <div className="section-wrapper">
+          <div className="section-left">
+            <div className="section-inner">
+              <Ruler />
+
+              <div className="timeline-experience">
+                <Timeline data={timelineData} />
+              </div>
+
+              <div className="timeline-country">
+                <Timeline data={countryTimelineData} />
+              </div>
+
+              <div className="timeline-skills">
+                <Timeline data={skillsTimelineData} />
+              </div>
+
+              <div className="timeline-positions">
+                <Timeline data={positionsTimelineData} />
+              </div>
+            </div>
+
+            <div className="section-top section-skills">
+              <div className="section-inner">
+                <IconTextTitle iconPath="skills.png" text="MAIN SKILLS" />
+
+                <div className="skill-wrapper skill-main">
+                  <IconText iconPath="/html.png" text="HTML" />
+                  <IconText iconPath="/css.png" text="CSS" />
+                  <IconText iconPath="/javascript.png" text="JavaScript" />
+                </div>
+
+                <div className="skill-wrapper">
+                  <strong className="classification">Front-end</strong>
+                  <div className="d-flex">
+                    <IconText iconPath="/vuejs.png" text="Vue.js" />
+                    <IconText iconPath="/reactjs.png" text="React" />
+                    <IconText iconPath="/angular.png" text="Angular" />
+                    <IconText iconPath="/bootstrap.png" text="Bootstrap" />
+                  </div>
+                </div>
+
+                <div className="skill-wrapper">
+                  <strong className="classification">Testing</strong>
+                  <div className="d-flex">
+                    <IconText
+                      iconPath="/protractor.png"
+                      text="Protractor (End-to-end)"
+                    />
+                  </div>
+                </div>
+
+                <div className="skill-wrapper">
+                  <strong className="classification">Back-end</strong>
+                  <div className="d-flex">
+                    <IconText iconPath="/nodejs.png" text="Node.js (Express)" />
+                    <IconText iconPath="/graphql.png" text="GraphQL" />
+                    <IconText iconPath="/postgresql.png" text="PostgreSQL" />
+                    <IconText iconPath="/redis.png" text="Redis" />
+                  </div>
+                </div>
+
+                <div className="skill-wrapper">
+                  <strong className="classification">Infrastructure</strong>
+                  <div>
+                    <IconText iconPath="/aws.png" text="AWS" />
+                  </div>
+                </div>
+
+                <div className="skill-wrapper">
+                  <strong className="classification">Other</strong>
+
+                  <div className="icon-text">
+                    GIT, Responsive pages, AJAX, RESTful APIs
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="section-top">
+              <div className="section-inner section-keywords">
+                <strong>Keywords:</strong> #software #developer #programmer
+                #engineer #desenvolvedor #programador #engenheiro #front-end
+                #frontend #full-stack #fullstack #vue #vue.js #react #react.js
+                #angular #angular.js #node.js #node
+                {/* <div className="title-styled-wrapper title-main-skills">
+                <h2 className="title-styled">
+                  <img className="icon-skills" src="/skills.png" />
+                  <div className="title-styled-text mt-10 title-other-skills">
+                    VOLUNTEERING
+                  </div>
+                </h2>
+              </div>
+
+              <span>Teaching HTML/CSS/JavaScript to refugees</span> */}
+              </div>
+            </div>
+          </div>
+
+          <div className="section-right">
+            <div className="section-inner">
+              <div className="bachelor">
+                <div className="bachelor-text">
+                  <div>Bachelor's degree in</div>
+                </div>
+              </div>
+
+              <div className="course-wrapper">
+                <IconTextTitle iconPath="education2.png" text="COMPUTER" />
+                <h1 className="engineering">ENGINEERING</h1>
+                <div className="at">at</div>
+              </div>
+
+              <img src="/inatel.svg" />
+            </div>
+
+            <div className="section-top section-made">
+              <div className="section-inner">
+                <div className="made">
+                  <div>CV made with</div>
+                  <img src="/reactjs.png" className="icon-small" />
+
+                  <div>React</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="section-top section-profile">
+              <div className="section-inner">
+                <Profile />
+              </div>
+            </div>
+
+            <div className="section-top section-contact">
+              <div className="section-inner">
+                <Contact />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// function SecondPage() {
+//   return (
+//     <div className="size-a4 page-detail">
+//       <div className="wrapper-inner-page">
+//         <div className="section">
+//           <div className="section-wrapper w-100">
+//             <h1 className="text text-center w-100 uppercase name">
+//               Eduardo Magaldi
+//             </h1>
+//           </div>
+//         </div>
+//         <div className="section">
+//           <h2 className="w-100 text-center objectives">
+//             SENIOR/LEAD FRONT-END / FULL-STACK DEVELOPER / DESIGNER
+//           </h2>
+//         </div>
+
+//         <div className="section">
+//           <div className="section-inner">
+//             <h2 className="w-100 text-center objectives uppercase mt-0">
+//               SUMMARY OF QUALIFICATIONS
+//             </h2>
+//             <ul className="list-content list-content-detail">
+//               <li>
+//                 Highly experienced <strong>Computer Engineer</strong> with{' '}
+//                 <strong>over 15 years</strong> of solid hands-on expertise in
+//                 production user-friendly web development in both{' '}
+//                 <strong>Germany</strong> and <strong>Brazil</strong>.{' '}
+//               </li>
+//               <li>
+//                 Proficient in <strong>JavaScript</strong> (ES6+),{' '}
+//                 <strong>HTML</strong>, <strong>CSS</strong>,{' '}
+//                 <strong>JSON</strong>, <strong>AJAX</strong>,{' '}
+//                 <strong>GIT</strong> and <strong>HTTP</strong>.
+//               </li>
+
+//               <li>
+//                 Knowledge of the three major modern front-end frameworks:{' '}
+//                 <strong>React</strong>, <strong>Vue</strong>, and{' '}
+//                 <strong>Angular</strong>.
+//               </li>
+
+//               <li>
+//                 Familiarity with <strong>RESTful node.js back-ends</strong>,{' '}
+//                 <strong>relational</strong> (PostgreSQL, SQL, GraphQL) and{' '}
+//                 <strong>NoSQL</strong> (Redis) databases.
+//               </li>
+
+//               <li>
+//                 <strong>AWS</strong> infrastructure competences, with expertise
+//                 in designing, deploying, and managing cloud solutions.
+//               </li>
+
+//               <li>
+//                 Committed with a deep understanding of visual design principles
+//                 and user interface (UI) impact on user experiences (UX), thanks
+//                 to a <strong>keen eye for detail</strong> and prior work as a
+//                 designer and pixel-perfect developer.
+//               </li>
+
+//               <li>
+//                 Strong <strong>critical thinking</strong> and{' '}
+//                 <strong>problem-solving</strong> skills, with the ability to
+//                 drive successful project outcomes.
+//               </li>
+//             </ul>
+//           </div>
+//         </div>
+
+//         <div className="section">
+//           <div className="section-inner">
+//             <h2 className="w-100 text-center objectives uppercase mt-0">
+//               PROFESSIONAL BACKGROUND
+//             </h2>
+
+//             <div className="flex justify-space-between company-title">
+//               <div>
+//                 <strong className="company-name mb-0">
+//                   LOCATELLI ADVOGADOS
+//                 </strong>
+//                 <span> - São Paulo, Brazil</span>
+//               </div>
+
+//               <strong>2022 – 2024</strong>
+//             </div>
+//             <hr className="mt-0 divider" />
+//             <div className="flex justify-space-between company-position">
+//               <div>
+//                 <strong>Tech Lead Full-stack Developer</strong>
+//               </div>
+
+//               <strong>Fev 2022 – Dec 2024</strong>
+//             </div>
+
+//             <ul className="list-content list-content-detail">
+//               <li>
+//                 Independently developed and maintained an internal tax lawsuit
+//                 management system entirely from scratch, choosing cutting-edge
+//                 technologies (Vue.js, Node and GraphQL) and taking on all
+//                 responsibilities and challenges with full ownership.
+//               </li>
+//               <li>
+//                 Team leadership: founded and led the IT team, hiring and
+//                 supervising two Programmers.
+//               </li>
+//               <li>
+//                 Integrated court APIs data to automate repetitive tasks,
+//                 boosting team productivity and eﬃciency optimizing the process
+//                 of emailing updated lawsuit PDF status reports to B2B clients.
+//               </li>
+//               <li>
+//                 Created custom calculators to support sales initiatives
+//                 estimating potential economy of tax lawsuits and enhancing sales
+//                 proposal accuracy.
+//               </li>
+//               <li>
+//                 Brought support solving technical issues promptly, minimizing
+//                 downtime for users and providing stable software.
+//               </li>
+//               <li>
+//                 Gathered and defined customer requirements to create successful
+//                 systems meeting unique client needs.
+//               </li>
+//               <li>
+//                 Used Vuex (similar to Redux) as a singleton design pattern state
+//                 management strategy.
+//               </li>
+//               <li>
+//                 Chose Express because of prior background with its chain of
+//                 responsibility and middleware design patterns.
+//               </li>
+//               <li>
+//                 Began generating PDFs with PDFKit but switched to a headless
+//                 Puppeteer Chromium browser Docker image solution, which enabled
+//                 easier creation of dynamic, content-size adaptable tables using
+//                 HTML and CSS within the PDF documents.
+//               </li>
+//             </ul>
+//           </div>
+//         </div>
+
+//         <div className="pagination">Page 2 / 4</div>
+//       </div>
+//     </div>
+//   )
+// }
+
+// function ThirdPage() {
+//   return (
+//     <div className="size-a4 page-detail">
+//       <div className="wrapper-inner-page">
+//         <div className="section">
+//           <div className="section-wrapper w-100">
+//             <div className="section-inner">
+//               <ul className="list-content list-content-detail">
+//                 <li>
+//                   Quoted third-party automated unit, interface (e2e) and
+//                   integration tests development services.
+//                 </li>
+//                 <li>
+//                   DevOps practices: used Github Actions for CI/CD (Continuous
+//                   Integration and Continuous Delivery) pipelines.
+//                 </li>
+//                 <li>
+//                   Adopted Amazon Web Services EC2 Linux servers, AWS RDS for
+//                   database with Hasura platform for GraphQL and AWS Lambda for
+//                   scheduled routines, using its SDK for nodejs.
+//                 </li>
+//                 <li>
+//                   Tasks were managed in Agile Methodology via Kanban Trello
+//                   board.
+//                 </li>
+//                 <li>
+//                   Applied DRY and KISS concepts to write clean, readable,
+//                   reusable, and maintainable code.
+//                 </li>
+//                 <li>
+//                   Volunteer initiative teaching HTML5 and CSS3 to non-technical
+//                   staff.
+//                 </li>
+//               </ul>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="section">
+//           <div className="section-inner">
+//             <div className="flex justify-space-between company-title">
+//               <div>
+//                 <strong className="company-name mb-0">TILDA</strong>
+
+//                 <span> - Berlin, Germany</span>
+//               </div>
+
+//               <strong>2021 – 2022</strong>
+//             </div>
+//             <hr className="mt-0 divider" />
+//             <div className="flex justify-space-between company-position">
+//               <div>
+//                 <strong>Senior Full Stack Engineer</strong>
+//               </div>
+
+//               <strong>Sep 2021 – Feb 2022</strong>
+//             </div>
+
+//             <ul className="list-content list-content-detail">
+//               <li>
+//                 Contributed to the development of a mental healthcare treatment
+//                 app for women aged 45 and older, addressing only mild mental
+//                 health issues, with educational content and weekly online group
+//                 therapy sessions.
+//               </li>
+//               <li>
+//                 Utilized SEO best practices to increase website visibility in
+//                 search engine results and accessibility, following strict
+//                 requirements of Google Lighthouse, including color contrast.
+//               </li>
+//               <li>
+//                 Tech stack: ReactJS, React hooks, TypeScript, SASS (SCSS),
+//                 Node.js, GraphQL, PostgreSQL, Terraform, AWS, Ruby on Rails,
+//                 Hugo (Golang static site generator - SSG), and Gitlab.
+//               </li>
+//             </ul>
+//           </div>
+//         </div>
+
+//         <div className="section">
+//           <div className="section-inner">
+//             <div className="flex justify-space-between company-title">
+//               <div>
+//                 <strong className="company-name mb-0">WUNDERTAX</strong>
+
+//                 <span> - Berlin, Germany</span>
+//               </div>
+
+//               <strong>2020 – 2021</strong>
+//             </div>
+//             <hr className="mt-0 divider" />
+//             <div className="flex justify-space-between company-position">
+//               <div>
+//                 <strong>Senior Front-end Engineer</strong>
+//               </div>
+
+//               <strong>Sep 2020 – Aug 2021</strong>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="section">
+//           <div className="section-inner">
+//             <div className="flex justify-space-between company-title">
+//               <div>
+//                 <strong className="company-name mb-0">TALENT ROCKET</strong>
+
+//                 <span> - Munich, Germany</span>
+//               </div>
+
+//               <strong>2021 – 2022</strong>
+//             </div>
+//             <hr className="mt-0 divider" />
+//             <div className="flex justify-space-between company-position">
+//               <div>
+//                 <strong>Senior Front-end Software Developer</strong>
+//               </div>
+
+//               <strong>Sep 2021 – Feb 2022</strong>
+//             </div>
+
+//             <ul className="list-content list-content-detail">
+//               <li>
+//                 Contributed to the frontend development of a recruitment
+//                 platform for lawyers in Germany, working with B2B and B2C.
+//               </li>
+//               <li>
+//                 Used scrum methodology with Fibonacci sequence for story point
+//                 estimation, contributing to sprint planning and reviews.
+//               </li>
+//               <li>
+//                 Implemented responsive design techniques to ensure websites
+//                 performed well on desktop, tablet, and mobile browsers and
+//                 devices.
+//               </li>
+//               <li>
+//                 Conducted website testing, identifying and fixing bugs for
+//                 smoother operation and building end-to-end (interface) automated
+//                 testing suite with Protractor (WebDriverJS / Selenium), covering
+//                 key features to ensure software stability and mitigate the risk
+//                 of unforeseen errors caused by new features.
+//               </li>
+//               <li>Real-time connection with WebSockets.</li>
+//               <li>
+//                 Volunteer initiative teaching HTML, CSS, and JavaScript to
+//                 refugees at ReDI School.
+//               </li>
+//               <li>
+//                 Tech stack: Angular, TypeScript, SASS, PHP, and hosted on
+//                 DigitalOcean.
+//               </li>
+//             </ul>
+//           </div>
+//         </div>
+
+//         <div className="pagination">Page 2 / 4</div>
+//       </div>
+//     </div>
+//   )
+// }
+
 function Header() {
   return (
     <div className="header">
@@ -364,33 +605,33 @@ function Header() {
   )
 }
 
-function HeaderShort() {
-  return (
-    <>
-      <div className="header short">
-        <h1 className="title education">
-          <div>CV</div>
-        </h1>
+// function HeaderShort() {
+//   return (
+//     <>
+//       <div className="header short">
+//         <h1 className="title education">
+//           <div>CV</div>
+//         </h1>
 
-        <h1 className="title name">
-          <div className="first">EDUARDO</div>
-          <div className="last">MAGALDI</div>
-        </h1>
+//         <h1 className="title name">
+//           <div className="first">EDUARDO</div>
+//           <div className="last">MAGALDI</div>
+//         </h1>
 
-        <h1 className="title education">
-          {/* <div>SOFTWARE</div> */}
+//         <h1 className="title education">
+//           {/* <div>SOFTWARE</div> */}
 
-          <div className="line-second">DEVELOPER</div>
-          <div className="line-second">
-            <span className="skills">MORE</span>
-            <span>DETAILED</span>
-            <span className="line-1">INFO</span>
-          </div>
-        </h1>
-      </div>
-    </>
-  )
-}
+//           <div className="line-second">DEVELOPER</div>
+//           <div className="line-second">
+//             <span className="skills">MORE</span>
+//             <span>DETAILED</span>
+//             <span className="line-1">INFO</span>
+//           </div>
+//         </h1>
+//       </div>
+//     </>
+//   )
+// }
 
 function getCountryTimelineData() {
   return [
@@ -552,18 +793,19 @@ function Profile() {
   )
 }
 
-function Contact({
-  formattedPhoneNumber,
-  emailPrefix,
-}: {
-  formattedPhoneNumber: any
-  emailPrefix: any
-}) {
+function Contact() {
+  //   {
+  //   formattedPhoneNumber,
+  //   emailPrefix,
+  // }: {
+  //   formattedPhoneNumber: any
+  //   emailPrefix: any
+  // }
   return (
     <>
       <IconTextTitle iconPath="phone.png" text="CONTACT INFO" />
 
-      <div className="email-wrapper phone-wrapper">
+      {/* <div className="email-wrapper phone-wrapper">
         <span>
           <small>Name: </small>
           <strong>Eduardo Magaldi</strong>
@@ -580,9 +822,9 @@ function Contact({
           {emailPrefix || '#########'}
           <small>@gmail.com</small>
         </a>
-      </div>
+      </div> */}
 
-      <div className="email-wrapper phone-wrapper">
+      {/* <div className="email-wrapper phone-wrapper">
         <img className="icon-whatsapp" src="/whatsapp.png" />
 
         <a
@@ -596,7 +838,7 @@ function Contact({
         >
           {formattedPhoneNumber ? formattedPhoneNumber : '+## ## ##### ####'}
         </a>
-      </div>
+      </div> */}
 
       <div className="email-wrapper phone-wrapper">
         <img className="icon-whatsapp" src="/linkedin.png" />

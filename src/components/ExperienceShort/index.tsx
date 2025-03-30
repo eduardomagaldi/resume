@@ -201,27 +201,27 @@ function Output({ item }: { item: any }) {
   return output
 }
 
-function Stack({ stack }: { stack: any[] }) {
-  if (!stack || !stack.length) return null
+// function Stack({ stack }: { stack: any[] }) {
+//   if (!stack || !stack.length) return null
 
-  return (
-    <ul className="list-content list-stack">
-      <li>Tech stack:</li>
-      <li className="parent">
-        <ul className="list-content list-stack-inner">
-          {stack.map((item: any, index: number) => (
-            <li key={'stack-' + index}>
-              <div className="wrapper-stack">
-                &#8203;
-                <IconText iconPath={item.img} text={item.name} />
-              </div>
-            </li>
-          ))}
-        </ul>
-      </li>
-    </ul>
-  )
-}
+//   return (
+//     <ul className="list-content list-stack">
+//       <li>Tech stack:</li>
+//       <li className="parent">
+//         <ul className="list-content list-stack-inner">
+//           {stack.map((item: any, index: number) => (
+//             <li key={'stack-' + index}>
+//               <div className="wrapper-stack">
+//                 &#8203;
+//                 <IconText iconPath={item.img} text={item.name} />
+//               </div>
+//             </li>
+//           ))}
+//         </ul>
+//       </li>
+//     </ul>
+//   )
+// }
 
 function format(date: string) {
   const splitted = date.split('-')

@@ -1,4 +1,4 @@
-const commonSkills = ['HTML', 'CSS', 'JavaScript']
+// const commonSkills = ['HTML', 'CSS', 'JavaScript']
 
 export default [
   {

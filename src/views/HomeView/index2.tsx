@@ -662,5 +662,3 @@ function Contact({
     </>
   )
 }
-
-function getHref() {}
