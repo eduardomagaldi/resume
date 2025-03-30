@@ -1,27 +1,27 @@
-import Timeline from '../../components/Timeline'
-import Ruler from '../../components/Ruler'
+import Timeline from "../../components/Timeline";
+import Ruler from "../../components/Ruler";
 // import Experience from '../../components/Experience'
 // import positionsData from '../../helpers/positionsData'
 
-import './index.scss'
+import "./index.scss";
 
-import companiesMap from '../../helpers/companiesData'
-import { decrypt } from '../../helpers/encrypt'
-import IconText from '../../components/IconText'
-import IconTextTitle from '../../components/IconTextTitle'
-import { useSearchParams } from 'react-router'
-import { useEffect } from 'react'
+import companiesMap from "../../helpers/companiesData";
+import { decrypt } from "../../helpers/encrypt";
+import IconText from "../../components/IconText";
+import IconTextTitle from "../../components/IconTextTitle";
+// import { useSearchParams } from 'react-router'
+import { useEffect } from "react";
 // import ExperienceShort from '../../components/ExperienceShort'
 
-const timelineData: any[] = []
+const timelineData: any[] = [];
 
 companiesMap.forEach((value) => {
-  timelineData.push(value)
-})
+  timelineData.push(value);
+});
 
-const countryTimelineData = getCountryTimelineData()
-const skillsTimelineData = getSkillsTimelineData()
-const positionsTimelineData = getPositionsTimelineData()
+const countryTimelineData = getCountryTimelineData();
+const skillsTimelineData = getSkillsTimelineData();
+const positionsTimelineData = getPositionsTimelineData();
 
 // const page2Data = [positionsData[0]]
 // const page2DataShort = [positionsData[1]]
@@ -34,9 +34,9 @@ const positionsTimelineData = getPositionsTimelineData()
 // const page4Data = [positionsData[6], positionsData[7], positionsData[8]]
 
 const phoneNumberFormattedEncrypted =
-  'iU03IjBxqpZAr8JeOMcFMyRe/8vLphWImHPnGebnWF2kQJom151ZNTBIkQBB3hPCtbY7oAroaDQP9MNlEg=='
+  "iU03IjBxqpZAr8JeOMcFMyRe/8vLphWImHPnGebnWF2kQJom151ZNTBIkQBB3hPCtbY7oAroaDQP9MNlEg==";
 const emailPrefixEncrypted =
-  'KmkqrAiZs1PzDmVMU2cOoWcCITUblHdDWhwZGl+Y2wASC2x9He3S0EMQeN9mFdg9DTQ4+IRSSQ=='
+  "KmkqrAiZs1PzDmVMU2cOoWcCITUblHdDWhwZGl+Y2wASC2x9He3S0EMQeN9mFdg9DTQ4+IRSSQ==";
 
 export default function App() {
   return (
@@ -83,36 +83,36 @@ export default function App() {
         </div>
       </div> */}
     </>
-  )
+  );
 }
 
 function FirstPage() {
   // const [setFormattedPhoneNumber] = useState('')
   // const [setEmailPrefix] = useState('')
 
-  const [searchParams] = useSearchParams()
+  // const [searchParams] = useSearchParams();
 
-  useEffect(() => {
-    ;(async function enc() {
-      const decryptedPhone = await decrypt(
-        phoneNumberFormattedEncrypted,
-        privateKey,
-      )
-      if (decryptedPhone !== 'decryption failed!') {
-        // setFormattedPhoneNumber(decryptedPhone)
-      }
+  // useEffect(() => {
+  //   (async function enc() {
+  //     const decryptedPhone = await decrypt(
+  //       phoneNumberFormattedEncrypted,
+  //       privateKey
+  //     );
+  //     if (decryptedPhone !== "decryption failed!") {
+  //       // setFormattedPhoneNumber(decryptedPhone)
+  //     }
 
-      const decryptedEmailPrefix = await decrypt(
-        emailPrefixEncrypted,
-        privateKey,
-      )
-      if (decryptedEmailPrefix !== 'decryption failed!') {
-        // setEmailPrefix(decryptedEmailPrefix)
-      }
-    })()
-  }, [])
+  //     const decryptedEmailPrefix = await decrypt(
+  //       emailPrefixEncrypted,
+  //       privateKey
+  //     );
+  //     if (decryptedEmailPrefix !== "decryption failed!") {
+  //       // setEmailPrefix(decryptedEmailPrefix)
+  //     }
+  //   })();
+  // }, []);
 
-  const privateKey: any = searchParams.get('key')
+  // const privateKey: any = searchParams.get("key");
 
   return (
     <div className="size-a4 page-first">
@@ -265,7 +265,7 @@ function FirstPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 // function SecondPage() {
@@ -602,7 +602,7 @@ function Header() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 // function HeaderShort() {
@@ -639,115 +639,115 @@ function getCountryTimelineData() {
       percentage: 54.1,
       first: true,
       year: 2010,
-      logoColor: '#009548',
-      logoShortPath: '/brazil-flag.svg',
+      logoColor: "#009548",
+      logoShortPath: "/brazil-flag.svg",
       logoOnly: true,
-      className: 'brazil-flag-only',
-      text: 'Brazil - 8 years',
+      className: "brazil-flag-only",
+      text: "Brazil - 8 years",
     },
 
     {
       percentage: 26.3,
-      logoColor: '#DD2327',
-      logoShortPath: '/germany-flag.svg',
-      text: 'Germany - 4 years',
-      className: 'germany',
+      logoColor: "#DD2327",
+      logoShortPath: "/germany-flag.svg",
+      text: "Germany - 4 years",
+      className: "germany",
     },
 
     {
       percentage: 19.6,
       year: 2024,
-      logoColor: '#009548',
-      logoShortPath: '/brazil-flag.svg',
-      text: 'Brazil - 3 years',
-      className: 'brazil',
+      logoColor: "#009548",
+      logoShortPath: "/brazil-flag.svg",
+      text: "Brazil - 3 years",
+      className: "brazil",
     },
-  ]
+  ];
 }
 
 function getSkillsTimelineData() {
   return [
     {
       percentage: 12.8,
-      logoColor: '#2A73B4',
-      logoShortPath: '/jquery.png',
+      logoColor: "#2A73B4",
+      logoShortPath: "/jquery.png",
       year: 2010,
       first: true,
-      text: 'jQuery',
+      text: "jQuery",
     },
 
     {
       percentage: 16.8,
-      logoColor: '#002A41',
-      logoShortPath: '/backbonejs.png',
-      text: 'Backbone.js',
-      className: 'backbone',
+      logoColor: "#002A41",
+      logoShortPath: "/backbonejs.png",
+      text: "Backbone.js",
+      className: "backbone",
     },
 
     {
       percentage: 12.8,
-      logoColor: '#2A73B4',
-      logoShortPath: '/jquery.png',
-      text: 'jQuery',
+      logoColor: "#2A73B4",
+      logoShortPath: "/jquery.png",
+      text: "jQuery",
     },
 
     {
       percentage: 28.5,
-      logoColor: '#C42AF1',
-      logoShortPath: '/angular.png',
-      text: 'Angular',
+      logoColor: "#C42AF1",
+      logoShortPath: "/angular.png",
+      text: "Angular",
     },
 
     {
       percentage: 9.5,
-      logoColor: '#387ca0',
-      logoShortPath: '/reactjs.png',
-      text: 'React',
+      logoColor: "#387ca0",
+      logoShortPath: "/reactjs.png",
+      text: "React",
     },
 
     {
       percentage: 19.6,
-      logoColor: '#41B883',
-      logoShortPath: '/vuejs.png',
-      text: 'Vue.js',
+      logoColor: "#41B883",
+      logoShortPath: "/vuejs.png",
+      text: "Vue.js",
     },
-  ]
+  ];
 }
 
 function getPositionsTimelineData() {
   return [
     {
       percentage: 12.8,
-      logoColor: '#DD2327',
-      logoShortPath: '/html.png',
+      logoColor: "#DD2327",
+      logoShortPath: "/html.png",
       year: 2010,
       first: true,
-      text: 'Front-end',
+      text: "Front-end",
     },
 
     {
       percentage: 16.8,
-      logoColor: '#18356e',
-      logoShortPath: '/fullstack.png',
-      className: 'fullstack',
-      text: 'Full-stack',
+      logoColor: "#18356e",
+      logoShortPath: "/fullstack.png",
+      className: "fullstack",
+      text: "Full-stack",
     },
 
     {
-      text: 'Front-end',
+      text: "Front-end",
       percentage: 12.8 + 6.7 + 16.8 + 2.2 + 9.5,
-      logoColor: '#DD2327',
-      logoShortPath: '/html.png',
+      logoColor: "#DD2327",
+      logoShortPath: "/html.png",
     },
 
     {
-      text: 'Full-stack',
-      logoShortPath: '/fullstack.png',
+      text: "Full-stack",
+      logoShortPath: "/fullstack.png",
       percentage: 19.6 + 2.8,
-      logoColor: '#18356e',
-      className: 'fullstack',
+      logoColor: "#18356e",
+      className: "fullstack",
     },
-  ]
+  ];
 }
 
 function Profile() {
@@ -764,12 +764,12 @@ function Profile() {
 
       <ul className="list-content list-content-first-page">
         <li>
-          Experienced front-end developer with great enthusiasm for{' '}
+          Experienced front-end developer with great enthusiasm for{" "}
           <strong>Design</strong>, <strong>UI</strong>, and <strong>UX</strong>.
         </li>
 
         <li>
-          Strong{' '}
+          Strong{" "}
           <a href="https://cantunsee.space/" target="_blank">
             attention to detail
           </a>
@@ -777,7 +777,7 @@ function Profile() {
         </li>
 
         <li>
-          Familiarity with <strong>RESTful back-ends</strong> and{' '}
+          Familiarity with <strong>RESTful back-ends</strong> and{" "}
           <strong>databases</strong>.
         </li>
 
@@ -785,12 +785,12 @@ function Profile() {
           <strong>Web design</strong> competences.
         </li>
         <li>
-          Fluent in <strong>English</strong> and <strong>Portuguese</strong>,{' '}
+          Fluent in <strong>English</strong> and <strong>Portuguese</strong>,{" "}
           with good communication skills.
         </li>
       </ul>
     </>
-  )
+  );
 }
 
 function Contact() {
@@ -880,5 +880,5 @@ function Contact() {
 
       <div className="email-wrapper phone-wrapper pagination">Page 1 / 4</div>
     </>
-  )
+  );
 }
