@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 // import { createRoot } from "react-dom/client";
-// import "./index.css";
+import "./index.css";
 // import App from "./App.jsx";
 
 // createRoot(document.getElementById("root")).render(
@@ -24,6 +24,7 @@ import HomeView from "./views/HomeView";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <HomeView />
+
   // <BrowserRouter>
   //   <Routes>
   //     <Route path="/" element={<MainLayout />}>

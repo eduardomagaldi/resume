@@ -150,18 +150,18 @@ function FirstPage() {
                 <IconTextTitle iconPath="skills.png" text="MAIN SKILLS" />
 
                 <div className="skill-wrapper skill-main">
-                  <IconText iconPath="/html.png" text="HTML" />
-                  <IconText iconPath="/css.png" text="CSS" />
-                  <IconText iconPath="/javascript.png" text="JavaScript" />
+                  <IconText iconPath="html.png" text="HTML" />
+                  <IconText iconPath="css.png" text="CSS" />
+                  <IconText iconPath="javascript.png" text="JavaScript" />
                 </div>
 
                 <div className="skill-wrapper">
                   <strong className="classification">Front-end</strong>
                   <div className="d-flex">
-                    <IconText iconPath="/vuejs.png" text="Vue.js" />
-                    <IconText iconPath="/reactjs.png" text="React" />
-                    <IconText iconPath="/angular.png" text="Angular" />
-                    <IconText iconPath="/bootstrap.png" text="Bootstrap" />
+                    <IconText iconPath="vuejs.png" text="Vue.js" />
+                    <IconText iconPath="reactjs.png" text="React" />
+                    <IconText iconPath="angular.png" text="Angular" />
+                    <IconText iconPath="bootstrap.png" text="Bootstrap" />
                   </div>
                 </div>
 
@@ -169,7 +169,7 @@ function FirstPage() {
                   <strong className="classification">Testing</strong>
                   <div className="d-flex">
                     <IconText
-                      iconPath="/protractor.png"
+                      iconPath="protractor.png"
                       text="Protractor (End-to-end)"
                     />
                   </div>
@@ -178,17 +178,17 @@ function FirstPage() {
                 <div className="skill-wrapper">
                   <strong className="classification">Back-end</strong>
                   <div className="d-flex">
-                    <IconText iconPath="/nodejs.png" text="Node.js (Express)" />
-                    <IconText iconPath="/graphql.png" text="GraphQL" />
-                    <IconText iconPath="/postgresql.png" text="PostgreSQL" />
-                    <IconText iconPath="/redis.png" text="Redis" />
+                    <IconText iconPath="nodejs.png" text="Node.js (Express)" />
+                    <IconText iconPath="graphql.png" text="GraphQL" />
+                    <IconText iconPath="postgresql.png" text="PostgreSQL" />
+                    <IconText iconPath="redis.png" text="Redis" />
                   </div>
                 </div>
 
                 <div className="skill-wrapper">
                   <strong className="classification">Infrastructure</strong>
                   <div>
-                    <IconText iconPath="/aws.png" text="AWS" />
+                    <IconText iconPath="aws.png" text="AWS" />
                   </div>
                 </div>
 
@@ -210,7 +210,7 @@ function FirstPage() {
                 #angular #angular.js #node.js #node
                 {/* <div className="title-styled-wrapper title-main-skills">
                 <h2 className="title-styled">
-                  <img className="icon-skills" src="/skills.png" />
+                  <img className="icon-skills" src="skills.png" />
                   <div className="title-styled-text mt-10 title-other-skills">
                     VOLUNTEERING
                   </div>
@@ -236,14 +236,14 @@ function FirstPage() {
                 <div className="at">at</div>
               </div>
 
-              <img src="/inatel.svg" />
+              <img src="inatel.svg" />
             </div>
 
             <div className="section-top section-made">
               <div className="section-inner">
                 <div className="made">
                   <div>CV made with</div>
-                  <img src="/reactjs.png" className="icon-small" />
+                  <img src="reactjs.png" className="icon-small" />
 
                   <div>React</div>
                 </div>
@@ -588,17 +588,17 @@ function Header() {
         <div className="last">MAGALDI</div>
       </h1>
 
-      <img className="software" src="/softwaredeveloper.png" />
+      <img className="software" src="softwaredeveloper.png" />
 
       <div className="map">
-        <img className="map-img" src="/world-stroke.svg" />
+        <img className="map-img" src="world-stroke.svg" />
 
         <div className="bubble bubble-germany">
-          <img className="img" src="/germany-flag-rounded.svg" />
+          <img className="img" src="germany-flag-rounded.svg" />
         </div>
 
         <div className="bubble bubble-brazil">
-          <img className="img" src="/brazil-flag-rounded.svg" />
+          <img className="img" src="brazil-flag-rounded.svg" />
         </div>
       </div>
     </div>
@@ -640,7 +640,7 @@ function getCountryTimelineData() {
       first: true,
       year: 2010,
       logoColor: "#009548",
-      logoShortPath: "/brazil-flag.svg",
+      logoShortPath: "brazil-flag.svg",
       logoOnly: true,
       className: "brazil-flag-only",
       text: "Brazil - 8 years",
@@ -649,7 +649,7 @@ function getCountryTimelineData() {
     {
       percentage: 26.3,
       logoColor: "#DD2327",
-      logoShortPath: "/germany-flag.svg",
+      logoShortPath: "germany-flag.svg",
       text: "Germany - 4 years",
       className: "germany",
     },
@@ -658,7 +658,7 @@ function getCountryTimelineData() {
       percentage: 19.6,
       year: 2024,
       logoColor: "#009548",
-      logoShortPath: "/brazil-flag.svg",
+      logoShortPath: "brazil-flag.svg",
       text: "Brazil - 3 years",
       className: "brazil",
     },
@@ -670,7 +670,7 @@ function getSkillsTimelineData() {
     {
       percentage: 12.8,
       logoColor: "#2A73B4",
-      logoShortPath: "/jquery.png",
+      logoShortPath: "jquery.png",
       year: 2010,
       first: true,
       text: "jQuery",
@@ -679,7 +679,7 @@ function getSkillsTimelineData() {
     {
       percentage: 16.8,
       logoColor: "#002A41",
-      logoShortPath: "/backbonejs.png",
+      logoShortPath: "backbonejs.png",
       text: "Backbone.js",
       className: "backbone",
     },
@@ -687,28 +687,28 @@ function getSkillsTimelineData() {
     {
       percentage: 12.8,
       logoColor: "#2A73B4",
-      logoShortPath: "/jquery.png",
+      logoShortPath: "jquery.png",
       text: "jQuery",
     },
 
     {
       percentage: 28.5,
       logoColor: "#C42AF1",
-      logoShortPath: "/angular.png",
+      logoShortPath: "angular.png",
       text: "Angular",
     },
 
     {
       percentage: 9.5,
       logoColor: "#387ca0",
-      logoShortPath: "/reactjs.png",
+      logoShortPath: "reactjs.png",
       text: "React",
     },
 
     {
       percentage: 19.6,
       logoColor: "#41B883",
-      logoShortPath: "/vuejs.png",
+      logoShortPath: "vuejs.png",
       text: "Vue.js",
     },
   ];
@@ -719,7 +719,7 @@ function getPositionsTimelineData() {
     {
       percentage: 12.8,
       logoColor: "#DD2327",
-      logoShortPath: "/html.png",
+      logoShortPath: "html.png",
       year: 2010,
       first: true,
       text: "Front-end",
@@ -728,7 +728,7 @@ function getPositionsTimelineData() {
     {
       percentage: 16.8,
       logoColor: "#18356e",
-      logoShortPath: "/fullstack.png",
+      logoShortPath: "fullstack.png",
       className: "fullstack",
       text: "Full-stack",
     },
@@ -737,12 +737,12 @@ function getPositionsTimelineData() {
       text: "Front-end",
       percentage: 12.8 + 6.7 + 16.8 + 2.2 + 9.5,
       logoColor: "#DD2327",
-      logoShortPath: "/html.png",
+      logoShortPath: "html.png",
     },
 
     {
       text: "Full-stack",
-      logoShortPath: "/fullstack.png",
+      logoShortPath: "fullstack.png",
       percentage: 19.6 + 2.8,
       logoColor: "#18356e",
       className: "fullstack",
@@ -755,7 +755,7 @@ function Profile() {
     <>
       {/* <div className="title-styled-wrapper">
         <h2 className="title-styled">
-          <img className="icon-profile" src="/profile.png" />
+          <img className="icon-profile" src="profile.png" />
           <div className="title-styled-text">PROFILE</div>
         </h2>
       </div> */}
@@ -813,7 +813,7 @@ function Contact() {
       </div>
 
       <div className="email-wrapper phone-wrapper">
-        <img className="icon-email" src="/email.png" />
+        <img className="icon-email" src="email.png" />
         <a
           className="email"
           href={emailPrefix ? `mailto:${emailPrefix}@gmail.com` : undefined}
@@ -825,7 +825,7 @@ function Contact() {
       </div> */}
 
       {/* <div className="email-wrapper phone-wrapper">
-        <img className="icon-whatsapp" src="/whatsapp.png" />
+        <img className="icon-whatsapp" src="whatsapp.png" />
 
         <a
           className="email"
@@ -841,7 +841,7 @@ function Contact() {
       </div> */}
 
       <div className="email-wrapper phone-wrapper">
-        <img className="icon-whatsapp" src="/linkedin.png" />
+        <img className="icon-whatsapp" src="linkedin.png" />
         <a
           className="email"
           href="https://www.linkedin.com/in/eduardomagaldi"
@@ -852,7 +852,7 @@ function Contact() {
       </div>
 
       <div className="email-wrapper phone-wrapper">
-        <img className="icon-whatsapp" src="/github.png" />
+        <img className="icon-whatsapp" src="github.png" />
         <a
           className="email"
           href="https://github.com/eduardomagaldi"
@@ -863,7 +863,7 @@ function Contact() {
       </div>
 
       <div className="email-wrapper phone-wrapper">
-        <img className="icon-whatsapp" src="/globe.png" />
+        <img className="icon-whatsapp" src="globe.png" />
         <a
           className="email"
           href="https://eduardomagaldi.github.io/eduardomagaldi.com.br/"
@@ -874,7 +874,7 @@ function Contact() {
       </div>
 
       <div className="email-wrapper phone-wrapper">
-        <img className="icon-whatsapp" src="/location.png" />
+        <img className="icon-whatsapp" src="location.png" />
         <span>Juiz de Fora, Brazil</span>
       </div>
 
