@@ -1,5 +1,6 @@
 const map = new Map();
 map.set("B2ml Sistemas", getB2mlData("B2ml Sistemas"));
+map.set("B2ml Sistemas", getB2mlData("B2ml Sistemas"));
 map.set("Vérios", getVeriosData("Vérios"));
 map.set("F.biz", getFbizData("F.biz"));
 map.set("Mira Educação", getMiraData("Mira Educação"));

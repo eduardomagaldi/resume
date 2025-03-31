@@ -152,7 +152,10 @@ function FirstPage() {
                 <div className="skill-wrapper skill-main">
                   <IconText iconPath="html.png" text="HTML" />
                   <IconText iconPath="css.png" text="CSS" />
-                  <IconText iconPath="javascript.png" text="JavaScript" />
+                  <IconText
+                    iconPath="javascript.png"
+                    text="JavaScript (ES6+ and TypeScript)"
+                  />
                 </div>
 
                 <div className="skill-wrapper">
@@ -196,19 +199,24 @@ function FirstPage() {
                   <strong className="classification">Other</strong>
 
                   <div className="icon-text">
-                    GIT, Responsive pages, AJAX, RESTful APIs
+                    GIT, Responsive pages, JSON, AJAX, RESTful APIs and HTTP
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="section-top">
+            {/* <div className="section-top">
               <div className="section-inner section-keywords">
                 <strong>Keywords:</strong> #software #developer #programmer
                 #engineer #desenvolvedor #programador #engenheiro #front-end
                 #frontend #full-stack #fullstack #vue #vue.js #react #react.js
                 #angular #angular.js #node.js #node
-                {/* <div className="title-styled-wrapper title-main-skills">
+
+              </div>
+            </div> */}
+          </div>
+
+          {/* <div className="title-styled-wrapper title-main-skills">
                 <h2 className="title-styled">
                   <img className="icon-skills" src="skills.png" />
                   <div className="title-styled-text mt-10 title-other-skills">
@@ -218,9 +226,6 @@ function FirstPage() {
               </div>
 
               <span>Teaching HTML/CSS/JavaScript to refugees</span> */}
-              </div>
-            </div>
-          </div>
 
           <div className="section-right">
             <div className="section-inner">
@@ -878,7 +883,7 @@ function Contact() {
         <span>Juiz de Fora, Brazil</span>
       </div>
 
-      <div className="email-wrapper phone-wrapper pagination">Page 1 / 4</div>
+      {/* <div className="email-wrapper phone-wrapper pagination">Page 1 / 4</div> */}
     </>
   );
 }
